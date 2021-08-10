@@ -1,5 +1,5 @@
 # Melo Trabaja
-## Proyecto 3ro EMT - La incognita
+## Proyecto - La incognita
 
 La idea general del proyecto es ofrecer oportunidades laborales a gente vulnerable que no pudieron conseguir, basicamente facilitar la busqueda laboral para la gente 
 que escasea de tiempo, o dinero. 
