@@ -1,0 +1,81 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.fila{
+    width: 100%;
+}
+/* Estilo de titulo del encabezado "Melotrabaja"*/
+.titulo{
+    font-size: 5vw;
+    text-align: center;
+}
+/* Estilo de lineas separadoras*/
+hr{
+  height: 1px;
+  width: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 62%); 
+}
+/* Estilo de hipervinculos*/
+a{
+    position: absolute;
+    right: auto;
+    left: 17px;
+    top: 0px;
+    font-family: serif;
+    text-size-adjust: 10px;
+}
+
+/*HAY QUE MODIFICAR EL ACCEDER DE HIPERVINCULO PORQUE ESTA MAL, HAY QUE AGRANDARLO Y AJUSTARLO CON LOS OTROS ICONOS
+---------
+---------
+---------
+---------
+---------
+*/
+/*Estilo de lupa*/
+#iconoLupa{
+    position: absolute;
+    right: 0px;
+    left: auto;
+    top: 3px;
+    height: 15px;
+    width: 15px;
+    background-image: url("imagenes/lupa.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*Estilo de menu*/
+#iconoMenu{
+    position: relative;
+    right: auto;
+    left: 0x;
+    top: 3px;
+    height: 15px;
+    width: 15px;
+    background-image: url("imagenes/menu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#barra{
+    position: relative;
+    height: 5%;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+#bordeContenido {
+    position: relative;
+    width: 90%; 
+    height: 300px; 
+    border: 1px solid black;
+    background-color: white;
+
+}
+
+#contenido{
+    background-color: blue;
+}
