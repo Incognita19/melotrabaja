@@ -5,28 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.js"></script>
-    
+    <script src="eventos.js"></script>
     <title>Inicio</title>
 </head>
 <body>
 <!-- DIVS -->
 <!-- DIV ENCABEZADO-->
 <div class="fila" id="encabezado">
-    <div id="meloTrabaja">
-        <h1>MELOTRABAJA</h1> 
+    <div id="meloTrabaja"></div>
     </div>
-    </div>
-
-
 <!-- DIV BARRA-->
-
-
 <div class="fila" id="barra">
-    <div class="toggle-btn" id="iconoMenu"></div>
-    <button  id="openLogin">
-             Acceder
-    </button>
-
+    <div id="iconoMenu">
+        <div id="menu_boton" onClick="AbrirMenu()"></div>
+        <div id="menu_elementos">
+        </div>
+        </div>
+    <button id="btnAcceder">Acceder</button>
     <div id="iconoLupa"></div>
 
 </div>
@@ -83,27 +78,7 @@
     </div>
 
     </div>
-
-<div id="BarraLateral" >
-        <div class="btn-cerrar">
-            <p>X</p>
-        </div>
-        <ul>
-        <li>
-            <img src="imagenes/logo.png" alt="Logo" class="logo">
-        </li>
-        <li>ABC</li>
-        <li>DCC</li>
-        <li>ERT</li>
-    </ul>
-</div>
-<div class="loginContenedor" id="loginContenedor">
-        <div class="login">
-            <h1>Login</h1>
-        <!-- FORMULARIOS LOGIN -->
-            <button id="closeLogin">Cerrar</button>
-        </div>
-    </div>
+<!-- DIV PIE -->
 <div class="fila" id="pie">
 
     </div>
@@ -111,6 +86,5 @@
 
 
 
-<script src="eventos.js"></script>
 </body>
 </html>
