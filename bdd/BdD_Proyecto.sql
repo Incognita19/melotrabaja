@@ -33,6 +33,6 @@ ID:varchar, not null, unique,
 create table CATEGORIAS(
 Nombre:varchar(20),not null, unique,
 ID:varchar, not null, unique,
-Descripcion:varchar, not null, unique,
+Descripcion:(500)varchar, not null, unique,
 
 );
