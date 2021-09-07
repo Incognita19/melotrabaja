@@ -7,7 +7,7 @@ Foto:varchar(40), null, no unique,
 Genero:varchar(10), not null,no unique,
 Ciudad:varchar(15), not null, unique,
 Curriculum:varchar(500), not null, unique,
-Descripcion Personal:varchar(250), not null, unique,
+Descripcion_Personal:varchar(250), not null, unique,
 Fecha_Nac:date(10),not null, not unico,
 CI:int (8), no null, unico,
 Nacionalidad:varchar(15),not null, no unique,
@@ -15,7 +15,7 @@ Nacionalidad:varchar(15),not null, no unique,
 create table USUARIO(
 Nombre:varchar(12), not null, no unique,
 Apellido:varchar(15), not null, no unique,
-Correo electronico:varchar(40), not null, no unique,
+Correo_electronico:varchar(40), not null, no unique,
 CI:int(8), not null, unique,
 );
 create table ADMINISTRADOR(
