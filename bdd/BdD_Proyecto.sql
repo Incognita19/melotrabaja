@@ -36,3 +36,26 @@ ID:varchar, not null, unique,
 Descripcion:(500)varchar, not null, unique,
 
 );
+ CREA(
+
+ )  
+
+ HABILITA(
+
+ )
+ 
+ APRUEBA(
+
+ )
+
+ PUBLICA(
+
+ )
+
+ TIENE(
+
+ )
+
+ DEFINE(
+
+ )
