@@ -16,7 +16,7 @@ ID_perfil  varchar (16) not null unique primary key,
 );
 --Aca estan los atributos que debe tener el Usuario para registrarse--
 create table REGISTRO_USUARIO(
-nombre_ususario varchar (12) not null unique primary key,
+nombre_usuario varchar (12) not null unique primary key,
 nombre varchar(12) not null no unique,
 apellido varchar(15) not null no unique,
 correo_electronico varchar(40) not null no unique,
@@ -36,7 +36,6 @@ tiempo_fin timestamp
 );
 --CONTIENE LA INFORMACION DE LOS ATRIBUTOS DEL ADMINISTRADOR--
 create table ADMINISTRADOR(
-nombre varchar(12) not null not unique,
 nombre varchar(12) not null  no unique,
 apellido varchar(15) not null no unique,
 correo_electronico varchar(40) not null no unique,
@@ -78,7 +77,7 @@ descripcion (500)varchar not null unique,
  );
 --Muestra la relación entre usuario y post--
  create table PUBLICA(
-     nombre_ususario varchar (12) no null no unique,
+     nombre_usuario varchar (12) no null no unique,
      Id_post varchar (16) no null unique FK,
  );
 --Muestra la relación entre post y categoria--
