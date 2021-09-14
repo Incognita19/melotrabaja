@@ -5,13 +5,13 @@
 create table PERFIL(
 nombre_ususario varchar (12) not null unique,
 num_telefono int(9) not null unique,
-foto varchar(40) null  no unique,
-genero varchar(10) not null no unique,
+foto varchar(40) null,
+genero varchar(10) not null,
 ciudad varchar(15) not null unique,
 curriculum varchar(500) not null unique,
 descripcion_Personal varchar(250) not null unique,
 fecha_Nac date(10) not null not unique, 
-nacionalidad varchar(15) not null no unique,
+nacionalidad varchar(15) not null,
 ID_perfil  varchar (16) not null unique primary key,
 );
 --Aca estan los atributos que debe tener el Usuario para registrarse--
