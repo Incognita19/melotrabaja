@@ -35,49 +35,49 @@
 <div class="fila" id="contenido">
     <div id="bordeContenido">
         <div id="contenidoTop" class="separacionContenido">
-        <p>Publicaciones Fijadas</p>
-            <div id="fijado" class="publicaciones">
-                <p id="titulo">Reprehenderit ut quos aute excepteur temporibus </p>
-                <p id="nombreuser">Adm1</p>
-                <p id="fecha">10/08/2021</p>
+        <h3>Publicaciones Destacadas</h3>
+        <div class="publicaciones destacadas">
+                <p class="titulo">Reprehenderit ut quos aute excepteur temporibus </p>
+                <p class="nombreuser">Adm1</p>
+                <p class="fecha">10/08/2021</p>
             </div>
-            <div id="fijado" class="publicaciones">
-            <p id="titulo">Voluptatem nostrum sequi delectus sint autem ex</p>
-                <p id="nombreuser">Adm2</p>
-                <p id="fecha">10/04/2021</p>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Voluptatem nostrum sequi delectus sint autem ex</p>
+                <p class="nombreuser">Adm2</p>
+                <p class="fecha">10/04/2021</p>
             </div>
-            <div id="fijado" class="publicaciones">
-            <p id="titulo">Totam dignissimos reprehenderit et nisi </p>
-                <p id="nombreuser">Adm3</p>
-                <p id="fecha">15/07/2021</p>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Totam dignissimos reprehenderit et nisi </p>
+                <p class="nombreuser">Adm3</p>
+                <p class="fecha">15/07/2021</p>
             </div>
-            <div id="fijado" class="publicaciones">
-            <p id="titulo">Aut saepe do in accusamus dolore aliquip et d</p>
-                <p id="nombreuser">Adm4</p>
-                <p id="fecha">05/02/2021</p>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Aut saepe do in accusamus dolore aliquip et d</p>
+                <p class="nombreuser">Adm4</p>
+                <p class="fecha">05/02/2021</p>
             </div>
 </div>
         <div class="separacionContenido">
-        <p>Publicaciones Recientes</p>
-            <div id="recientes" class="publicaciones">
-            <p id="titulo">Et quia omnis nemo molestias cu</p>
-                <p id="nombreuser">User1</p>
-                <p id="fecha">30/12/2021</p>
+        <h3>Publicaciones Recientes</h3>
+            <div class="publicaciones recientes">
+            <p class="titulo">Et quia omnis nemo molestias cu</p>
+                <p class="nombreuser">User1</p>
+                <p class="fecha">30/12/2021</p>
             </div>
-            <div id="recientes" class="publicaciones">
-            <p id="titulo">Voluptas nobis modi nesciunt error </p>
-                <p id="nombreuser">User2</p>
-                <p id="fecha">02/02/2021</p>
+            <div class="publicaciones recientes">
+            <p class="titulo">Voluptas nobis modi nesciunt error </p>
+                <p class="nombreuser">User2</p>
+                <p class="fecha">02/02/2021</p>
             </div>
-            <div id="recientes" class="publicaciones">
-            <p id="titulo">Est placeat cumque dolor est enim</p>
-                <p id="nombreuser">User3</p>
-                <p id="fecha">05/08/2021</p>
+            <div class="publicaciones recientes">
+            <p class="titulo">Est placeat cumque dolor est enim</p>
+                <p class="nombreuser">User3</p>
+                <p class="fecha">05/08/2021</p>
             </div>
-            <div id="recientes" class="publicaciones">
-            <p id="titulo">Suscipit omnis irure enim ut irure omnis</p>
-                <p id="nombreuser">User4</p>
-                <p id="fecha">01/06/2021</p>
+            <div class="publicaciones recientes">
+            <p class="titulo">Suscipit omnis irure enim ut irure omnis</p>
+                <p class="nombreuser">User4</p>
+                <p class="fecha">01/06/2021</p>
             </div>
         </div>
     </div>
@@ -92,14 +92,25 @@
         <li>
             <img src="imagenes/logo.png" alt="Logo" class="logo">
         </li>
-        <li>ABC</li>
-        <li>DCC</li>
-        <li>ERT</li>
+        <li class="btn-barra">
+            <a href=""><button class="boton">SASD</button></a>
+        </li>
+        <li class="btn-barra">
+            <a href=""><button class="boton">ASDASD</button></a>
+        </li>
+        <li class="btn-barra">
+            <a href=""><button class="boton">ASDASD</button></a>
+        </li>
     </ul>
 </div>
 <div class="loginContenedor" id="loginContenedor">
         <div class="login">
-            <h1>Login</h1>
+            <h1>Login</h1><br>
+            <p>Nombre de usuario</p><br>
+            <input type="User" name="Nombre de usuario" id="Username"><br>
+            <p>Contraseña</p><br>
+            <input type="Contra" name="Contraseña" id="Password"><br>
+            <p>Registrarse</p>
         <!-- FORMULARIOS LOGIN -->
             <button id="closeLogin">Cerrar</button>
         </div>
