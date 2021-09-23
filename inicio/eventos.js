@@ -11,6 +11,9 @@ btnToggle.addEventListener('click', function () {
 // La constante btnToggle escucha un click para hacer una función
 
     document.getElementById('BarraLateral').classList.toggle('active');
+    document.getElementById('loginContenedor').classList.toggle('mostrar');
+    document.getElementById('login').classList.remove('mostrar');
+
 // Al recibir el click se obtiene una clase de la BarraLateral llamado active y se agrega o se quita la clase 
 // active haciendo que la barra lateral se expanda o se contraiga
 })
@@ -40,16 +43,19 @@ btnCerrar.addEventListener('click', function () {
 const loginOpen = document.getElementById('loginOpen');
 const loginContenedor = document.getElementById('loginContenedor');
 const loginClose = document.getElementById('loginClose');
+const login = document.getElementById('login');
 // Se reciben las id y se guardan en constantes
 
 openLogin.addEventListener('click', () => {
     loginContenedor.classList.add('mostrar');
+    login.classList.add('mostrar');
 // Se recibe un click y se muestra la pantalla de login
 });
 
 
 closeLogin.addEventListener('click', () => {
     loginContenedor.classList.remove('mostrar');
+    login.classList.remove('mostrar');
 // Se recibe un click y se cierra la pantalla de login
 });
 

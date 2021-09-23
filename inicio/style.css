@@ -47,8 +47,14 @@
 .mostrar{
     pointer-events: auto;
     opacity: 1;
+
 }
+
+
 .login{
+
+
+
     background-color: white;
     width: 600px;
     height: 300px;
@@ -138,8 +144,8 @@
     color: black;
     font-size: 14px;
     padding: 5px 10px;
-    cursor: pointer;
     top: 90%;
+    cursor: pointer;
 }
 
 .boton{
@@ -189,11 +195,16 @@ p{
     position: relative;
     height: 5%;
     background-color: rgba(24, 119, 242, 1);
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
+
+}
+
+
+#logo{
     background-image: url("imagenes/logo.png");
     background-size: 45px;
     background-repeat: no-repeat;
     background-position: 20%;
-    /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
 
 }
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
@@ -350,23 +361,39 @@ p{
 #encabezado{
     position: relative;
     height: 8%;
+    width: 100%;
     background-color: rgba(24, 119, 242, 1);
-    background-image: url("imagenes/logo.png");
-    background-size: 65px;
-    background-repeat: no-repeat;
-    background-position: 35%;
     /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
+
+}
+
+#logo{
+    float: left;
+    height: 100%;
+    width: 80px;
+    background-image: url("imagenes/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
 
 }
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 #meloTrabaja{
+    position: relative;
+    height: 100%;
+    width: calc(100% - 464px);
+    left: calc(50% - 232px);
     cursor: default;
-    top: 5%;
-    text-align: center;
     font-family: 'Acme', sans-serif;
     color: white;
     font-size: 25px;
-    padding: 4px 119px;
+    /*padding: 4px 119px;*/
+}
+
+#meloTrabaja h1{
+    padding-top: 4px;
+    display: inline-block;
+    left: 0px;
 }
 
 /* CERRAR ENCABEZADO

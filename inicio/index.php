@@ -13,6 +13,7 @@
 <!-- DIV ENCABEZADO-->
 <div class="fila" id="encabezado">
     <div id="meloTrabaja">
+        <div id="logo"></div>
         <h1>MELOTRABAJA</h1> 
     </div>
     </div>
@@ -84,6 +85,8 @@
 
     </div>
 
+
+<div class="loginContenedor" id="loginContenedor">
 <div id="BarraLateral" >
         <div class="btn-cerrar">
             <p>X</p>
@@ -92,9 +95,11 @@
         <li>
             <img src="imagenes/logo.png" alt="Logo" class="logo">
         </li>
-        <li class="btn-barra">
-            <a href=""><button class="boton">SASD</button></a>
-        </li>
+        <a href="http://">
+            <li class="btn-barra">
+            <p>asdasd</p>
+            </li>
+        </a>
         <li class="btn-barra">
             <a href=""><button class="boton">ASDASD</button></a>
         </li>
@@ -103,8 +108,7 @@
         </li>
     </ul>
 </div>
-<div class="loginContenedor" id="loginContenedor">
-        <div class="login">
+        <div class="login" id="login">
             <h1>Login</h1><br>
             <p>Nombre de usuario</p><br>
             <input type="User" name="Nombre de usuario" id="Username"><br>
