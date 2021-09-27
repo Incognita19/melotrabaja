@@ -16,10 +16,10 @@ ID_perfil  varchar (16) not null unique primary key,
 );
 --Aca estan los atributos que debe tener el Usuario para registrarse--
 create table REGISTRO_USUARIO(
-nombre_ususario varchar (12) not null unique primary key,
-nombre varchar(12) not null,
-apellido varchar(15) not null,
-correo_electronico varchar(40) not null,
+nombre_usuario varchar (12) not null unique primary key,
+nombre varchar(12) not null no unique,
+apellido varchar(15) not null no unique,
+correo_electronico varchar(40) not null no unique,
 );
 --LOS ATRIBUTOS QUE TIENE EL USUARIO EN EL INICIO  DE LA APLICACIÓN--
 create table INICIO_USUARIO(
@@ -36,10 +36,9 @@ tiempo_fin timestamp
 );
 --CONTIENE LA INFORMACION DE LOS ATRIBUTOS DEL ADMINISTRADOR--
 create table ADMINISTRADOR(
-nombre varchar(12) not null,
-nombre varchar(12) not null,
-apellido varchar(15) not null,
-correo_electronico varchar(40) not null,
+nombre varchar(12) not null  no unique,
+apellido varchar(15) not null no unique,
+correo_electronico varchar(40) not null no unique,
 CI int(8)  not null  unique primary key,
 );
 --REGISTRA LAS LA INFORMACIÓN DE LAS PUBLICACIÓNES-- 
@@ -78,8 +77,8 @@ descripcion (500)varchar not null unique,
  );
 --Muestra la relación entre usuario y post--
  create table PUBLICA(
-     nombre_ususario varchar (12) not null,
-     Id_post varchar (16) not null unique,
+     nombre_usuario varchar (12) no null no unique,
+     Id_post varchar (16) no null unique FK,
  );
 --Muestra la relación entre post y categoria--
   create table TIENE(
