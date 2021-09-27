@@ -1,9 +1,45 @@
-
+ul {
+    padding: 0;
+    width: 100%;
+  }
+  
+  /* li {
+    display: inline;
+  } */
+  
+  a {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    margin-right: 0.625%;
+    text-align: center;
+    /* line-height: 3; */
+    color: black;
+  }
+  
+  li:last-child a {
+    margin-right: 0;
+  }
+  
+  a:link, a:visited, a:focus {
+    background: white;
+  }
+  
+  a:hover {
+    background: rgba(24, 119, 242, 0.8);
+  }
+  
+  a:active {
+    background: darkturquoise;
+    color: white;
+  }
 
 /* ABRIR LOGIN
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 #closeLogin{
+    position: absolute;
     background-color: rgba(24, 119, 242, 0.8);
     text-size-adjust: 10px;
     border: 0;
@@ -13,7 +49,7 @@
     font-size: 14px;
     padding: 5px 10px;
     cursor: pointer;
-    top: 90%;
+    left: 36%;
 }
 
 #openLogin{
@@ -50,11 +86,11 @@
 
 }
 
-
+.mostrarlogin{
+    pointer-events: auto;
+    opacity: 0;
+}
 .login{
-
-
-
     background-color: white;
     width: 600px;
     height: 300px;
@@ -62,20 +98,42 @@
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-
     
+}
+#login1{
+
+}
+
+.robotLogin{
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    border-color: 5px solid white;
+    display: block;
+    height: 300px;
+    width: 300px;
+}
+
+.cuentaReg{
+    top: 61%;
 }
 
 .login h1 {
+    position: relative;
     margin: 0;
+    left: 10%;
 }
 
 .login p {
+    left: 32%;
+    position: absolute;
     opacity: 0.7;
     font-size: 14px;
 }
 
+.login input {
+    margin: 2%;
+}
 /* CERRAR LOGIN
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
@@ -135,6 +193,10 @@
     width: 50px;
   }
 
+.imgBarra{
+    width: 30px;
+    height: 30px;
+}
 .btn-barra{
     background-color: white;
     text-size-adjust: 10px;
@@ -149,14 +211,11 @@
 }
 
 .boton{
-    background-color: rgba(24, 119, 242, 0.8);
     position: relative;
     border: 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color: #ffff;
     font-size: 14px;
-    padding: 5px 10px;
     cursor: pointer;
 }
 /* CERRAR BARRA-LATERAL

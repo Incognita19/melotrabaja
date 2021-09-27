@@ -11,8 +11,11 @@ btnToggle.addEventListener('click', function () {
 // La constante btnToggle escucha un click para hacer una función
 
     document.getElementById('BarraLateral').classList.toggle('active');
+
+
     document.getElementById('loginContenedor').classList.toggle('mostrar');
-    document.getElementById('login').classList.remove('mostrar');
+    
+    document.getElementById('login').classList.add('mostrarlogin');
 
 // Al recibir el click se obtiene una clase de la BarraLateral llamado active y se agrega o se quita la clase 
 // active haciendo que la barra lateral se expanda o se contraiga
@@ -25,6 +28,8 @@ const btnCerrar = document.querySelector('.btn-cerrar');
 
 btnCerrar.addEventListener('click', function () {
 // La constante btnCerrar escucha un click para hacer una función
+
+    document.getElementById('loginContenedor').classList.remove('mostrar');
 
     document.getElementById('BarraLateral').classList.toggle('active');
 // Al recibir el click se obtiene una clase de la BarraLateral llamado active y se agrega o se quita la clase 

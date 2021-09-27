@@ -95,28 +95,36 @@
         <li>
             <img src="imagenes/logo.png" alt="Logo" class="logo">
         </li>
+        <a href="../perfil">
+            <li class="boton">
+            <img src="imagenes/perfil-personal.png" alt="LogoPerfil" class="imgBarra">
+            <p>PERFIL</p>
+            </li>
+        </a>
         <a href="http://">
-            <li class="btn-barra">
+            <li class="boton">
             <p>asdasd</p>
             </li>
         </a>
-        <li class="btn-barra">
-            <a href=""><button class="boton">ASDASD</button></a>
-        </li>
-        <li class="btn-barra">
-            <a href=""><button class="boton">ASDASD</button></a>
-        </li>
+        <a href="http://">
+            <li class="boton">
+            <p>asdasd</p>
+            </li>
+        </a>
     </ul>
 </div>
-        <div class="login" id="login">
+        <div class="login" class="mostrarlogin" id="login">
+        <div id="login1">
             <h1>Login</h1><br>
             <p>Nombre de usuario</p><br>
             <input type="User" name="Nombre de usuario" id="Username"><br>
             <p>Contraseña</p><br>
             <input type="Contra" name="Contraseña" id="Password"><br>
-            <p>Registrarse</p>
         <!-- FORMULARIOS LOGIN -->
             <button id="closeLogin">Cerrar</button>
+            <p class="cuentaReg" >¿Aún no tienes una cuenta?</p>
+            <img src="imagenes/robotLogin.png" alt="Logo" class="robotLogin" >
+            </div>
         </div>
     </div>
 <div class="fila" id="pie">
