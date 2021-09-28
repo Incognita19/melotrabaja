@@ -15,7 +15,7 @@ btnToggle.addEventListener('click', function () {
 
     document.getElementById('loginContenedor').classList.toggle('mostrar');
     
-    document.getElementById('login').classList.add('mostrarlogin');
+    //document.getElementById('login').classList.add('mostrarlogin');
 
 // Al recibir el click se obtiene una clase de la BarraLateral llamado active y se agrega o se quita la clase 
 // active haciendo que la barra lateral se expanda o se contraiga
@@ -32,6 +32,7 @@ btnCerrar.addEventListener('click', function () {
     document.getElementById('loginContenedor').classList.remove('mostrar');
 
     document.getElementById('BarraLateral').classList.toggle('active');
+    //document.getElementById('login').classList.remove('mostrarlogin');
 // Al recibir el click se obtiene una clase de la BarraLateral llamado active y se agrega o se quita la clase 
 // active haciendo que la barra lateral se expanda o se contraiga
 

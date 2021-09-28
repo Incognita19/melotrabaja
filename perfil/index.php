@@ -51,15 +51,15 @@
             <span>TRABAJOS</span>
         </div>
         <div class="contenido" id="contenido4">
-            <div class="info">
-        <img src="imagenes/RobotMuestra.png" id="robotMuestra" alt="">
-        <p id="textoRobot">Hola! Intenta darle click a los botones que estan encima mio para
-        aprender nuevas funcionalidades.
-        </p>
-        </div>
         </div>
 
-        
+        <div class="info" id="infoRobot">
+                <img src="imagenes/RobotMuestra.png" id="robotMuestra" alt="">
+                <p id="textoRobot">
+                Hola! Intenta darle click a los botones que estan encima mio para
+        aprender nuevas funcionalidades.
+                </p>
+             </div>
 
     <!-- <h1 class="boton">TU PERFIL</h1>
     <h1 class="boton">DETALLES DE LA CUENTA</h1>

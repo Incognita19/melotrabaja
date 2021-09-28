@@ -18,10 +18,13 @@
 <div class="fila" id="barra">
     <div id="iconoMenu">
         <div id="menu_boton" onClick="AbrirMenu()"></div>
-        <div id="menu_elementos">
-        </div>
+            <div id="menu_elementos">
+            </div>
         </div>
     <button id="btnAcceder">Acceder</button>
+    <div id="cartel">
+        <span id="textoFijo">Somos una empresa</span> <span id="textoCambiante"></span>
+    </div>
     <div id="iconoLupa"></div>
 
 </div>
@@ -83,6 +86,7 @@
 
     </div>
 <!-- /DIVS -->
+<script>cambiarcartel()</script>
 
 
 

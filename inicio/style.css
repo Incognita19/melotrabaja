@@ -82,11 +82,11 @@ ul {
 
 .mostrar{
     pointer-events: auto;
-    opacity: 1;
+    opacity: 1 !important;
 
 }
 
-.mostrarlogin{
+.ocultarlogin{
     pointer-events: auto;
     opacity: 0;
 }
@@ -98,11 +98,9 @@ ul {
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    
+    opacity: 0;
 }
-#login1{
 
-}
 
 .robotLogin{
     position: absolute;
@@ -131,7 +129,30 @@ ul {
     font-size: 14px;
 }
 
+#contenido:hover{
+
+}
+.publicaciones:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
+.toggle-btn:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+#closeLogin:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+#openLogin:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+.login input:hover {
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+
+.login input:focus {
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
 .login input {
+    
     margin: 2%;
 }
 /* CERRAR LOGIN

@@ -21,3 +21,15 @@ function AbrirMenu() {
         $('.menu_item_texto').toggle();
     }
 }
+
+    let posic = 0;
+
+function cambiarcartel() {
+    let texto = ['roja','azul','verde'];
+    const zonacartel = document.getElementById("textoCambiante");
+        posic++;
+    if (posic==3) {
+        posic = 0;
+    }
+    zonacartel.innerHTML = texto[posic];
+    }

@@ -619,9 +619,7 @@ p{
     font-weight: bolder;
 }
 
-#info{
-    opacity: 1;
-}
-.invi{
-    opacity: 0;
+
+#infoRobot{
+    transition: display 500ms;
 }

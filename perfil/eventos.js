@@ -15,7 +15,7 @@ btnToggle.addEventListener('click', function () {
 
     document.getElementById('loginContenedor').classList.toggle('mostrar');
     
-    document.getElementById('login').classList.add('mostrarlogin');
+    //document.getElementById('login').classList.add('mostrarlogin');
 
 // Al recibir el click se obtiene una clase de la BarraLateral llamado active y se agrega o se quita la clase 
 // active haciendo que la barra lateral se expanda o se contraiga
@@ -67,7 +67,7 @@ closeLogin.addEventListener('click', () => {
 
 
 
-
+const robot = document.getElementById('infoRobot');
 
 
 var btnActivo="";
@@ -89,6 +89,9 @@ function ObtenerEspacioLibre(elemento) {
 
 
 function ActivarBoton(idBoton) {
+    robot.style.width="0px";
+    robot.style.display="none";
+
     //Obtenemos todos los elementos del div contenedor
     var elementos = idBoton.parentElement.children;
 
@@ -130,10 +133,9 @@ function AgregarBoton(textoBoton,contenido) {
 }
 
 
-const imgRobotInfo = document.querySelector('ActivarBoton');
 
-imgRobotInfo.addEventListener('click', function () {
 
-imgRobotInfo.classList.remove('invi');
 
-})
+
+
+ 
