@@ -27,7 +27,7 @@
     <button  id="openLogin">
              Acceder
     </button>
-
+    
     <div id="iconoLupa"></div>
 
 </div>
@@ -53,22 +53,19 @@
         <div class="contenido" id="contenido4">
         </div>
 
-        <div class="info" id="infoRobot">
-                <img src="imagenes/RobotMuestra.png" id="robotMuestra" alt="">
-                <p id="textoRobot">
-                Hola! Intenta darle click a los botones que estan encima mio para
-        aprender nuevas funcionalidades.
-                </p>
-             </div>
 
-    <!-- <h1 class="boton">TU PERFIL</h1>
-    <h1 class="boton">DETALLES DE LA CUENTA</h1>
-    <h1 class="boton">CONTRASEÑA Y SEGURIDAD</h1>
-    <h1 class="boton">TRABAJOS</h1> -->
+
+
     </div>
 
 </div>
 
+<div class="info" id="infoRobot">
+                <!-- <img src="imagenes/RobotMuestra.png" id="robotMuestra" alt=""> -->
+                <p id="textoRobot">
+                Hola! Acá estoy de vuelta, clickea los botones encima de mi (Luego de desaparecerme clickea de nuevo!)
+                </p>
+        </div>
 
 <div class="loginContenedor" id="loginContenedor">
 <div id="BarraLateral" >

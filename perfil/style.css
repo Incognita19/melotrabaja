@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
+
+
+
 ul {
     padding: 0;
     width: 100%;
@@ -597,7 +601,7 @@ p{
     height: 0px;
     width: 100%;
     background-color: rgba(245, 245, 245, 1);
-    overflow: scroll;
+
 }
 
 #robotMuestra{
@@ -614,12 +618,23 @@ p{
     width: 400px;
     height: 400px;
     position: absolute;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Yaldevi', sans-serif;
     font-size: 25px;
     font-weight: bolder;
 }
 
-
 #infoRobot{
-    transition: display 500ms;
+    top: auto;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    transition: opacity 500ms;
+    overflow: hidden;
+    background-image: url("imagenes/RobotMuestra.png");
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
+
+

@@ -89,9 +89,12 @@ function ObtenerEspacioLibre(elemento) {
 
 
 function ActivarBoton(idBoton) {
-    robot.style.width="0px";
-    robot.style.display="none";
+    
+   
 
+//    $(robot).fadeOut("slow");
+
+    
     //Obtenemos todos los elementos del div contenedor
     var elementos = idBoton.parentElement.children;
 
@@ -122,6 +125,7 @@ function ActivarBoton(idBoton) {
             display:"block"
         }
     );
+    robot.style.opacity="0";
 }
 
 function AgregarBoton(textoBoton,contenido) {
