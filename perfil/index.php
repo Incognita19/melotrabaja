@@ -24,9 +24,7 @@
 
 <div class="fila" id="barra">
     <div class="toggle-btn" id="iconoMenu"></div>
-    <button  id="openLogin">
-             Acceder
-    </button>
+
     
     <div id="iconoLupa"></div>
 
@@ -38,7 +36,9 @@
     <div class="boton" id="boton1" onclick="ActivarBoton(this)">
             <span>TU PERFIL</span>
         </div>
-        <div class="contenido" id="contenido1"></div>
+        <div class="contenido" id="contenido1">
+            kajhsdkjahdfkjhasdkjfhakjsdhfkjahsdkjfhakjsdfh
+        </div>
         <div class="boton" id="boton2" onclick="ActivarBoton(this)">
             <span>DETALLES DE LA CUENTA</span>
         </div>
@@ -63,7 +63,7 @@
 <div class="info" id="infoRobot">
                 <!-- <img src="imagenes/RobotMuestra.png" id="robotMuestra" alt=""> -->
                 <p id="textoRobot">
-                Hola! Acá estoy de vuelta, clickea los botones encima de mi (Luego de desaparecerme clickea de nuevo!)
+                Hola! Acá estoy de vuelta, clickea los botones encima de mi!
                 </p>
         </div>
 
@@ -93,17 +93,9 @@
         </a>
     </ul>
 </div>
-        <div class="login" class="mostrarlogin" id="login">
-            <h1>Login</h1><br>
-            <p>Nombre de usuario</p><br>
-            <input type="User" name="Nombre de usuario" id="Username"><br>
-            <p>Contraseña</p><br>
-            <input type="Contra" name="Contraseña" id="Password"><br>
-            <p>Registrarse</p>
-        <!-- FORMULARIOS LOGIN -->
-            <button id="closeLogin">Cerrar</button>
-        </div>
-    </div>
+
+
+</div>
 <div class="fila" id="pie">
 
     </div>

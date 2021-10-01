@@ -2,6 +2,7 @@ html,body{
     width: 100%;
     height: 100%;
     margin: 0px;
+    background: rgba(24, 119, 242, 0.8);
  
 }
 h1,p{
@@ -41,17 +42,7 @@ h1,p{
 }
 
 
-#iconoLupa{
-    position: absolute;
-    right: 5px;
-    left: auto;
-    top: 25%;
-    height: 15px;
-    width: 15px;
-    background-image: url("imagenes/lupa.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+
 
 #btnAcceder{
     position: absolute;
@@ -230,3 +221,64 @@ h1,p{
 }
 /* CERRAR PIE
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+
+
+
+
+
+
+
+
+
+.buscar{
+    top: 500%;
+    right: 50%;
+    position: absolute;
+    padding: 5px;
+
+}
+
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 500ms ease;
+}
+
+.btn{
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    cursor: pointer;
+}
+
+.buscar:hover input{
+    width: 240px;
+    
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+#iconoLupa{
+
+    width: 15px;
+
+}

@@ -28,10 +28,17 @@
              Acceder
     </button>
 
-    <div id="iconoLupa"></div>
+    <div class="buscar"></buscar>
+
+
+<input type="text" placeholder="Buscar" required>
+    <div class="btn"> 
+<img id="iconoLupa" src="imagenes/lupa.png" alt="">
 
 </div>
 
+    </div>
+</div>
 <!-- DIV CONTENIDO -->
 <div class="fila" id="contenido">
     <div id="bordeContenido">
@@ -87,33 +94,33 @@
 
 
 <div class="loginContenedor" id="loginContenedor">
-<div id="BarraLateral" >
+    <div id="BarraLateral" >
         <div class="btn-cerrar">
             <p>X</p>
         </div>
         <ul>
-        <li>
-            <img src="imagenes/logo.png" alt="Logo" class="logo">
-        </li>
-        <a href="../perfil">
-            <li class="boton">
-            <img src="imagenes/perfil-personal.png" alt="LogoPerfil" class="imgBarra">
-            <p>PERFIL</p>
+            <li>
+                <img src="imagenes/logo.png" alt="Logo" class="logo">
             </li>
-        </a>
-        <a href="http://">
-            <li class="boton">
-            <p>asdasd</p>
-            </li>
-        </a>
-        <a href="http://">
-            <li class="boton">
-            <p>asdasd</p>
-            </li>
-        </a>
-    </ul>
-</div>
-        <div class="login" class="mostrarlogin" id="login">
+            <a href="../perfil">
+                <li class="boton">
+                <img src="imagenes/perfil-personal.png" alt="LogoPerfil" class="imgBarra">
+                <p>PERFIL</p>
+                </li>
+            </a>
+            <a href="http://">
+                <li class="boton">
+                <p>asdasd</p>
+                </li>
+            </a>
+            <a href="http://">
+                <li class="boton">
+                <p>asdasd</p>
+                </li>
+            </a>
+        </ul>   
+    </div>
+    <div class="login" class="mostrarlogin" id="login">
         <div id="login1">
             <h1>Login</h1><br>
             <p>Nombre de usuario</p><br>
@@ -127,6 +134,8 @@
             </div>
         </div>
     </div>
+
+
 <div class="fila" id="pie">
 
     </div>

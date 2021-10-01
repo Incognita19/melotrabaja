@@ -421,8 +421,8 @@ p{
 #meloTrabaja{
     position: relative;
     height: 100%;
-    width: calc(100% - 464px);
-    left: calc(50% - 232px);
+    width: 33%;
+    left: 33%;
     cursor: default;
     font-family: 'Acme', sans-serif;
     color: white;
@@ -477,7 +477,7 @@ p{
 /* ABRIR CONTENIDO
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/                                    
 #contenidoGen{
-    height: 85%;
+    height: 83%;
     /* border-bottom: 2px solid gray; */
     /* background-color: #f7f7f7; */
     box-shadow: 0px -1px 5px #999;
@@ -563,7 +563,7 @@ p{
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 #pie{
     background-color: #eeeeee;
-    height: 5%;
+    height: 4%;
 }
 /* CERRAR PIE
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -601,7 +601,7 @@ p{
     height: 0px;
     width: 100%;
     background-color: rgba(245, 245, 245, 1);
-
+    overflow: hidden;
 }
 
 #robotMuestra{
@@ -613,8 +613,8 @@ p{
 }
 
 #textoRobot{
-    top: 41%;
-    left: 51%;
+    top: 15%;
+    left: 56%;
     width: 400px;
     height: 400px;
     position: absolute;

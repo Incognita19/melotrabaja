@@ -75,8 +75,8 @@ ul {
     pointer-events: none;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     transition: 200ms linear;
 }
 
@@ -129,13 +129,11 @@ ul {
     font-size: 14px;
 }
 
-#contenido:hover{
 
-}
 .publicaciones:hover{
     box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
 }
-.toggle-btn:hover{
+.toggle-btn:hover {
     box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
 }
 #closeLogin:hover{
@@ -313,17 +311,7 @@ p{
 }
 
 
-#iconoLupa{
-    position: absolute;
-    right: 5px;
-    left: auto;
-    top: 25%;
-    height: 15px;
-    width: 15px;
-    background-image: url("imagenes/lupa.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+
 
 
 /* CERRAR BARRA
@@ -461,8 +449,8 @@ p{
 #meloTrabaja{
     position: relative;
     height: 100%;
-    width: calc(100% - 464px);
-    left: calc(50% - 232px);
+    width: 33%;
+    left: 33%;
     cursor: default;
     font-family: 'Acme', sans-serif;
     color: white;
@@ -494,17 +482,7 @@ p{
 }
 
 
-#iconoLupa{
-    position: absolute;
-    right: 5px;
-    left: auto;
-    top: 25%;
-    height: 15px;
-    width: 15px;
-    background-image: url("imagenes/lupa.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
+
 
 
 /* CERRAR BARRA
@@ -517,7 +495,7 @@ p{
 /* ABRIR CONTENIDO
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/                                    
 #contenido{
-    height: 85%;
+    height: 83%;
     /* border-bottom: 2px solid gray; */
     /* background-color: #f7f7f7; */
     box-shadow: 0px -1px 5px #999;
@@ -603,7 +581,7 @@ p{
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 #pie{
     background-color: #eeeeee;
-    height: 5%;
+    height: 4%;
 }
 /* CERRAR PIE
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -613,3 +591,54 @@ p{
 }
 
 
+
+
+.buscar{
+    top: -12%;
+    left: 81%;
+    position: absolute;
+    padding: 5px;
+
+}
+
+.buscar input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    box-shadow: 0px 0.2px 5px #999;
+    border-radius: 30px;
+    transition: all 500ms ease;
+}
+
+.btn{
+    border-color: transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 52px;
+    height: 40px;
+    line-height: 55px;
+    cursor: pointer;
+}
+
+.buscar:hover input{
+    width: 240px;
+    
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+#iconoLupa{
+
+    width: 15px;
+
+}

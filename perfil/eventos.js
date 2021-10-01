@@ -45,24 +45,24 @@ btnCerrar.addEventListener('click', function () {
 
 })
 
-const loginOpen = document.getElementById('loginOpen');
-const loginContenedor = document.getElementById('loginContenedor');
-const loginClose = document.getElementById('loginClose');
-const login = document.getElementById('login');
-// Se reciben las id y se guardan en constantes
+// const loginOpen = document.getElementById('loginOpen');
+// const loginContenedor = document.getElementById('loginContenedor');
+// const loginClose = document.getElementById('loginClose');
+// const login = document.getElementById('login');
+// // Se reciben las id y se guardan en constantes
 
-openLogin.addEventListener('click', () => {
-    loginContenedor.classList.add('mostrar');
-    login.classList.add('mostrar');
-// Se recibe un click y se muestra la pantalla de login
-});
+// openLogin.addEventListener('click', () => {
+//     loginContenedor.classList.add('mostrar');
+//     login.classList.add('mostrar');
+// // Se recibe un click y se muestra la pantalla de login
+// });
 
 
-closeLogin.addEventListener('click', () => {
-    loginContenedor.classList.remove('mostrar');
-    login.classList.remove('mostrar');
-// Se recibe un click y se cierra la pantalla de login
-});
+// closeLogin.addEventListener('click', () => {
+//     loginContenedor.classList.remove('mostrar');
+//     login.classList.remove('mostrar');
+// // Se recibe un click y se cierra la pantalla de login
+// });
 
 
 
@@ -90,7 +90,6 @@ function ObtenerEspacioLibre(elemento) {
 
 function ActivarBoton(idBoton) {
     
-   
 
 //    $(robot).fadeOut("slow");
 
