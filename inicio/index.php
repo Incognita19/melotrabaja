@@ -43,7 +43,7 @@
 <div class="fila" id="contenido">
     <div id="bordeContenido">
         <div id="contenidoTop" class="separacionContenido">
-        <h3>Publicaciones Destacadas</h3>
+        <h3>PUBLICACIONES DESTACADAS</h3>
         <div class="publicaciones destacadas">
                 <p class="titulo">Reprehenderit ut quos aute excepteur temporibus </p>
                 <p class="nombreuser">Adm1</p>
@@ -64,9 +64,46 @@
                 <p class="nombreuser">Adm4</p>
                 <p class="fecha">05/02/2021</p>
             </div>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Tempor suscipit et deleniti aut culpa eu voluptate cupid</p>
+                <p class="nombreuser">Adm5</p>
+                <p class="fecha">05/03/2021</p>
+            </div>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Tempor suscipit et deleniti aut culpa eu voluptate cupid</p>
+                <p class="nombreuser">Adm5</p>
+                <p class="fecha">05/03/2021</p>
+            </div>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Tempor suscipit et deleniti aut culpa eu voluptate cupid</p>
+                <p class="nombreuser">Adm5</p>
+                <p class="fecha">05/03/2021</p>
+            </div>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Tempor suscipit et deleniti aut culpa eu voluptate cupid</p>
+                <p class="nombreuser">Adm5</p>
+                <p class="fecha">05/03/2021</p>
+            </div>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Tempor suscipit et deleniti aut culpa eu voluptate cupid</p>
+                <p class="nombreuser">Adm5</p>
+                <p class="fecha">05/03/2021</p>
+            </div>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Tempor suscipit et deleniti aut culpa eu voluptate cupid</p>
+                <p class="nombreuser">Adm5</p>
+                <p class="fecha">05/03/2021</p>
+            </div>
+            <div class="publicaciones destacadas">
+            <p class="titulo">Tempor suscipit et deleniti aut culpa eu voluptate cupid</p>
+                <p class="nombreuser">Adm5</p>
+                <p class="fecha">05/03/2021</p>
+            </div>
+
+
 </div>
         <div class="separacionContenido">
-        <h3>Publicaciones Recientes</h3>
+        <h3>PUBLICACIONES RECIENTES</h3>
             <div class="publicaciones recientes">
             <p class="titulo">Et quia omnis nemo molestias cu</p>
                 <p class="nombreuser">User1</p>
@@ -87,6 +124,31 @@
                 <p class="nombreuser">User4</p>
                 <p class="fecha">01/06/2021</p>
             </div>
+            <div class="publicaciones recientes">
+            <p class="titulo">Suscipit omnis irure enim ut irure omnis</p>
+                <p class="nombreuser">User4</p>
+                <p class="fecha">01/06/2021</p>
+            </div>
+            <div class="publicaciones recientes">
+            <p class="titulo">Suscipit omnis irure enim ut irure omnis</p>
+                <p class="nombreuser">User4</p>
+                <p class="fecha">01/06/2021</p>
+            </div>
+            <div class="publicaciones recientes">
+            <p class="titulo">Suscipit omnis irure enim ut irure omnis</p>
+                <p class="nombreuser">User4</p>
+                <p class="fecha">01/06/2021</p>
+            </div>
+            <div class="publicaciones recientes">
+            <p class="titulo">Suscipit omnis irure enim ut irure omnis</p>
+                <p class="nombreuser">User4</p>
+                <p class="fecha">01/06/2021</p>
+            </div>
+            <div class="publicaciones recientes">
+            <p class="titulo">Suscipit omnis irure enim ut irure omnis</p>
+                <p class="nombreuser">User4</p>
+                <p class="fecha">01/06/2021</p>
+            </div>
         </div>
     </div>
 
@@ -99,8 +161,8 @@
             <p>X</p>
         </div>
         <ul>
-            <li>
-                <img src="imagenes/logo.png" alt="Logo" class="logo">
+            <li class="contLogoBarra">
+                <img src="imagenes/logo.png" alt="Logo" class="logoBarra">
             </li>
             <a href="../perfil">
                 <li class="boton">

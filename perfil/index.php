@@ -33,12 +33,54 @@
 <!-- DIV CONTENIDO -->
 <div class="fila" id="contenidoGen">
     <div id="bordeContenido">
-    <div class="boton" id="boton1" onclick="ActivarBoton(this)">
+        <div class="boton" id="boton1" onclick="ActivarBoton(this)">
             <span>TU PERFIL</span>
         </div>
-        <div class="contenido" id="contenido1">
-            kajhsdkjahdfkjhasdkjfhakjsdhfkjahsdkjfhakjsdfh
+            <div class="contenido" id="contenido1">
+                <div id="contenidoPerfil">
+                    <div class="cuadroImgPerfil"></div>
+
+                <div id="textosPerfil">
+
+                    <table>
+                        <tr>
+                            <td><span class="nomDatoPerfil">Nombres: </span></td>
+                            <td><span class="datoPerfil">Sae</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="nomDatoPerfil">Apellidos: </span></td>
+                            <td><span class="datoPerfil">Byeok</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="nomDatoPerfil">Nickname: </span></td>
+                            <td><span class="datoPerfil">Saebyeok19</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="nomDatoPerfil">Email: </span></td>
+                            <td><span class="datoPerfil">sae-byeok@gmail.com</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="nomDatoPerfil">Fecha Nac: </span></td>
+                            <td><span class="datoPerfil">25/04/1998</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="nomDatoPerfil">Registrado: </span></td>
+                            <td><span class="datoPerfil">15/09/20020</span></td>
+                        </tr>
+                    </table>
+
+
+                </div>
+
+
+
+
+
+
+            <div class="cuadroDescPerfil"></div>
+                </div>
         </div>
+
         <div class="boton" id="boton2" onclick="ActivarBoton(this)">
             <span>DETALLES DE LA CUENTA</span>
         </div>

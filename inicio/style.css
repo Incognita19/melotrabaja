@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 ul {
     padding: 0;
     width: 100%;
@@ -27,7 +28,7 @@ ul {
   }
   
   a:hover {
-    background: rgba(24, 119, 242, 0.8);
+    background: rgba(65, 255, 245, 0.1);
   }
   
   a:active {
@@ -203,7 +204,7 @@ ul {
     background-size: contain; 
 } 
 
-.logo {
+.logoBarra {
     background-color: rgba(24, 119, 242, 0.8);;
     border-radius: 50%;
     border-color: 5px solid white;
@@ -253,7 +254,6 @@ html,body{
 h1,h3{
     margin-top: 0px; 
     margin-right: 0px;
-    font-weight: bolder;
 }
 p{
     margin-top: 0px; 
@@ -285,7 +285,7 @@ p{
     background-position: 20%;
 
 }
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 #meloTrabaja{
     font-family: 'Acme', sans-serif;
     color: white;
@@ -445,7 +445,6 @@ p{
     background-position: 20%;
 
 }
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 #meloTrabaja{
     position: relative;
     height: 100%;
@@ -459,6 +458,7 @@ p{
 }
 
 #meloTrabaja h1{
+    font-weight: bolder;
     padding-top: 4px;
     display: inline-block;
     left: 0px;
@@ -519,7 +519,7 @@ p{
     width: 100%;
     height: 50%;
     /*border-bottom: 1px solid black;*/
-    
+    overflow-y: scroll;
 }
 
 #contenidoTop{
@@ -534,8 +534,21 @@ p{
     border: 0.5px solid rgba(0,0,0,0.30);
     box-shadow: 0px 0.2px 5px #999;
 }
+
+
+.publicaciones h1,h2,h3{
+    background-color: rgba(139, 139, 139, 0.1);
+    color: black;
+    font-size: 15px!important;
+    font-weight: 1!important;
+    font-family: 'Acme', sans-serif;
+}
+
+.publicaciones p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .titulo{
-    font-weight: 400px;
+    font-size: 50px;
     position: relative;
     float: left;
     left: 45px;
@@ -602,18 +615,24 @@ p{
 }
 
 .buscar input{
+    border: none;
     width: 240px;
     height: 40px;
     padding: 0 20px;
     font-size: 15px;
     color: black;
     outline: none;
-    border: 1px solid silver;
-    box-shadow: 0px 0.2px 5px #999;
     border-radius: 30px;
     transition: all 500ms ease;
 }
 
+.buscar input:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
+
+.buscar input:focus{
+        box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
 .btn{
     border-color: transparent;
     border-radius: 50%;
@@ -626,7 +645,6 @@ p{
     width: 52px;
     height: 40px;
     line-height: 55px;
-    cursor: pointer;
 }
 
 .buscar:hover input{

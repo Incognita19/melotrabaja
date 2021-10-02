@@ -1,0 +1,12 @@
+                <span class="textoNicksspananerfil">Nombres: </span>
+                <span class="nombres">Sae</span>
+                <span class="textoNickspanerfil">Aspanellidos: </span>
+                <span class="aspanellidos">Byeok</span>
+                <span class="textoNickspanerfil">Nick: </span>
+                <span class="nick">Sae Byeok</span>
+                <span class="textoNickspanerfil">Email: </span>
+                <span class="email">sae-byeok@gmail.com</span>
+                <span class="textoNickspanerfil">Fecha Nac: </span>
+                <span class="fechaNac">25/04/1349</span>
+                <span class="textoNickspanerfil">Registrado: </span>
+                <span class="registrado">15/09/2001</span>
