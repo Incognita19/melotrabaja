@@ -26,10 +26,16 @@
     <div class="toggle-btn" id="iconoMenu"></div>
 
     
-    <div id="iconoLupa"></div>
+    <div class="buscar"></buscar>
+
+
+<input type="text" placeholder="Buscar" required>
+    <div class="btn"> 
+<img id="iconoLupa" src="imagenes/lupa.png" alt="">
 
 </div>
-
+</div>
+</div>
 <!-- DIV CONTENIDO -->
 <div class="fila" id="contenidoGen">
     <div id="bordeContenido">

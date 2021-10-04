@@ -273,17 +273,6 @@ p{
 }
 
 
-#iconoLupa{
-    position: absolute;
-    right: 5px;
-    left: auto;
-    top: 25%;
-    height: 15px;
-    width: 15px;
-    background-image: url("imagenes/lupa.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 
 
 /* CERRAR BARRA
@@ -454,17 +443,6 @@ p{
 }
 
 
-#iconoLupa{
-    position: absolute;
-    right: 5px;
-    left: auto;
-    top: 25%;
-    height: 15px;
-    width: 15px;
-    background-image: url("imagenes/lupa.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 
 
 /* CERRAR BARRA
@@ -691,3 +669,59 @@ p{
 }
 
 
+
+
+.buscar{
+    top: -12%;
+    left: 81%;
+    position: absolute;
+    padding: 5px;
+
+}
+
+.buscar input{
+    border: none;
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border-radius: 30px;
+    transition: all 500ms ease;
+}
+
+.buscar input:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
+
+.buscar input:focus{
+        box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
+.btn{
+    border-color: transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 52px;
+    height: 40px;
+    line-height: 55px;
+}
+
+.buscar:hover input{
+    width: 240px;
+    
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+#iconoLupa{
+
+    width: 15px;
+
+}
