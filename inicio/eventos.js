@@ -38,6 +38,26 @@ btnCerrar.addEventListener('click', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ____________________________________________________________________________________
 
 //                  -- PANTALLA DE LOGIN --
@@ -65,3 +85,55 @@ closeLogin.addEventListener('click', () => {
 // Se recibe un click y se cierra la pantalla de login
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ____________________________________________________________________________________
+
+//                  -- ACCESO A DATOS --
+// ____________________________________________________________________________________
+
+
+    function cargarFijadas() {
+        datos = publicaciones;
+        divPublicacion = document.createElement('div');
+        divPublicacion.classList.add('publicaciones fijadas')
+
+        ptitulo = document.createElement('p');
+        ptitulo.classList.add('titulo')
+
+        pnombreuser = document.createElement('p');
+        pnombreuser.classList.add('nombreuser')
+
+        pfecha = document.createElement('p');
+        pfecha.classList.add('fecha')
+
+        divPublicacion.appendChild(ptitulo)
+        divPublicacion.appendChild(pnombreuser)
+        divPublicacion.appendChild(pfecha)
+
+
+    }

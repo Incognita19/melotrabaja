@@ -4,36 +4,26 @@ ul {
     width: 100%;
   }
   
+  :root {
+    --colorP: rgba(24, 119, 242, 1);
+  }
   /* li {
     display: inline;
   } */
   
-  a {
-    outline: none;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    margin-right: 0.625%;
-    text-align: center;
-    /* line-height: 3; */
-    color: black;
+  a {outline: none; text-decoration: none; display: inline-block; width: 100%; margin-right: 0.625%; text-align: center; color: black;
   }
   
-  li:last-child a {
-    margin-right: 0;
+  li:last-child a { margin-right: 0;
   }
   
-  a:link, a:visited, a:focus {
-    background: white;
+  a:link, a:visited, a:focus { background: white;
   }
   
-  a:hover {
-    background: rgba(65, 255, 245, 0.1);
+  a:hover { background: rgba(65, 255, 245, 0.1);
   }
   
-  a:active {
-    background: darkturquoise;
-    color: white;
+  a:active { background: darkturquoise; color: white;
   }
 
 /* ABRIR LOGIN
@@ -41,7 +31,7 @@ ul {
 
 #closeLogin{
     position: absolute;
-    background-color: rgba(24, 119, 242, 0.8);
+    background-color: var(--colorP);
     text-size-adjust: 10px;
     border: 0;
     border-radius: 5px;
@@ -54,7 +44,7 @@ ul {
 }
 
 #openLogin{
-    background-color: rgba(24, 119, 242, 0.8);
+    background-color: var(--colorP);
     position: relative;
     left: 25px;
     top: 15%;
@@ -205,7 +195,7 @@ ul {
 } 
 
 .logoBarra {
-    background-color: rgba(24, 119, 242, 0.8);;
+    background-color: var(--colorP);
     border-radius: 50%;
     border-color: 5px solid white;
     display: block;
@@ -272,7 +262,7 @@ p{
 #encabezado{
     position: relative;
     height: 5%;
-    background-color: rgba(24, 119, 242, 1);
+    background-color: var(--colorP);
     /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
 
 }
@@ -332,10 +322,7 @@ p{
 }
 
 #bordeContenido {
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -webkit-transition: all 0.5s ease-out;
-    transition:all 0.5s ease-out;
+    
     position: relative;
     width: 100%; 
     height: 90%;
@@ -360,6 +347,7 @@ p{
 }
 
 .publicaciones{
+    
     height: 15%;
     width: 99.5%;
     margin-top: 8px;
@@ -389,7 +377,7 @@ p{
     color: #A9A9A9;
     font-size: 80%;
 }
-.destacadas{
+.fijadas{
 
     position: relative;
     background-image: url("imagenes/adminicon.png");
@@ -435,7 +423,7 @@ p{
     position: relative;
     height: 8%;
     width: 100%;
-    background-color: rgba(24, 119, 242, 1);
+    background-color: var(--colorP);
     /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
 
 }
@@ -575,7 +563,7 @@ p{
     color: #A9A9A9;
     font-size: 80%;
 }
-.destacadas{
+.fijadas{
     position: relative;
     background-image: url("imagenes/adminicon.png");
     background-size: contain;
