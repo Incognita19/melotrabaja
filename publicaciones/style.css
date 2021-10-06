@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+ul {
+    padding: 0;
+    width: 100%;
+  }
+  
+  :root {
+    --colorP: rgba(24, 119, 242, 1);
+  }
+  /* li {
+    display: inline;
+  } */
+  
+  a {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    margin-right: 0.625%;
+    text-align: center;
+    /* line-height: 3; */
+    color: black;
+  }
+  
+  li:last-child a {
+    margin-right: 0;
+  }
+  
+  a:link, a:visited, a:focus {
+    background: white;
+  }
+  
+  a:hover {
+    background: var(--colorP);
+  }
+  
+  a:active {
+    background: darkturquoise;
+    color: white;
+  }
+
+/* ABRIR LOGIN
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+#closeLogin{
+    background-color: var(--colorP);
+    text-size-adjust: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    top: 90%;
+}
+
+#openLogin{
+    background-color: var(--colorP);
+    position: relative;
+    left: 25px;
+    top: 15%;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.loginContenedor{
+    opacity: 0;
+    display: flex;
+    background-color: rgb(105,105,105, 0.6);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 200ms linear;
+}
+
+.mostrar{
+    pointer-events: auto;
+    opacity: 1;
+
+}
+
+.mostrarlogin{
+    pointer-events: auto;
+    opacity: 0;
+}
+.login{
+
+
+
+    background-color: white;
+    width: 600px;
+    height: 300px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    
+}
+
+.login h1 {
+    margin: 0;
+}
+
+.login p {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+/* CERRAR LOGIN
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+/* ABRIR BARRA-LATERAL
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+#BarraLateral{
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color:  rgba(250, 250, 250, 1);
+    box-shadow: 0px 1px 5px #707070;
+    left: -205px;
+    transition: all 500ms linear;
+}
+
+#BarraLateral.active{
+    left: 0;
+}
+#BarraLateral ul li{
+    color: rgba(1, 1, 1, .9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+#BarraLateral .btn-cerrar{
+    color: black;
+    height: 30px;
+    width: 30px;
+    float: right;
+    cursor: pointer;
+}
+#iconoMenu{
+    position: absolute;
+    right: auto;
+    left: 5px;
+    top: 25%;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    background-image: url("imagenes/menu.png");
+    background-repeat: no-repeat;
+    background-size: contain; 
+} 
+
+.logo {
+    background-color: var(--colorP);;
+    border-radius: 50%;
+    border-color: 5px solid white;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+
+.btn-barra{
+    background-color: white;
+    text-size-adjust: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 14px;
+    padding: 5px 10px;
+    top: 90%;
+    cursor: pointer;
+}
+
+.boton{
+    position: relative;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 15px ;
+}
+/* CERRAR BARRA-LATERAL
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+h1,h3{
+    margin-top: 0px; 
+    margin-right: 0px;
+    font-weight: bolder;
+}
+p{
+    margin-top: 0px; 
+    margin-right: 0px;
+}
+.fila{
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+/* ABRIR ENCABEZADO
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+#encabezado{
+    position: relative;
+    height: 5%;
+    background-color: var(--colorP);
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
+
+}
+
+
+#logo{
+    background-image: url("imagenes/logo.png");
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: 20%;
+
+}
+
+#meloTrabaja{
+    font-family: 'Acme', sans-serif;
+    color: white;
+    font-size: 11px;
+    padding: 4px 119px;
+}
+
+/* CERRAR ENCABEZADO
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+
+/* ABRIR BARRA
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+#barra{
+    background-color: #F8F8FF;
+    position: relative;
+    height: 5%;
+    /* border-top: 2px solid gray;
+    border-bottom: 2px solid gray; */
+    box-shadow: 0px 1px 5px #999;
+}
+
+
+
+
+/* CERRAR BARRA
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+                                    
+/* ABRIR contenidoGen
+––––––––––––––––––––––––––––––––––––––––––––––––––*/                                    
+#contenidoGen{
+    height: 85%;
+    /* border-bottom: 2px solid gray; */
+    /* background-color: #f7f7f7; */
+    box-shadow: 0px -1px 5px #999;
+    
+}
+
+#bordeContenido {
+    position: relative;
+    width: 100%; 
+    height: 90%;
+    top: 5%;
+    /* border: 0.5px solid rgba(0,0,0,0.20); */
+    /* background-color: white; */
+    background-image: url("imagenes/1pxblanco090.png");
+    opacity: 90%;
+    /* box-shadow: 0px 2px 5px #f7f7f7; */
+}
+
+.separacionContenido{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    /*border-bottom: 1px solid black;*/
+    
+}
+
+#contenidoTop{
+    border-bottom: 3px solid #f7f7f7;
+}
+
+.publicaciones{
+    height: 15%;
+    width: 99.5%;
+    margin-top: 8px;
+    border: 0.5px solid rgba(0,0,0,0.30);
+    box-shadow: 0px 0.2px 5px #999;
+}
+.titulo{
+    position: relative;
+    float: left;
+    left: 45px;
+    color: #707070;
+    font-size: 90%;
+}
+.nombreuser{
+    position: absolute;
+    left: 45px;
+    top: 19px;
+    color: #A9A9A9;
+    font-size: 80%;
+}
+.fecha{
+    position: relative;
+    float: right;
+    right: 5px;
+    top: 19px;
+    color: #A9A9A9;
+    font-size: 80%;
+}
+.destacadas{
+
+    position: relative;
+    background-image: url("imagenes/adminicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.recientes{
+    position: relative;
+    background-image: url("imagenes/usuarioicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+/* CERRAR CONTENIDO
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+/* ABRIR PIE
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+#pie{
+    background-color: #eeeeee;
+    height: 5%;
+}
+/* CERRAR PIE
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+
+}
+
+
+
+@media only screen and (min-width: 769px) {
+
+/* ABRIR ENCABEZADO
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+#encabezado{
+    position: relative;
+    height: 8%;
+    width: 100%;
+    background-color: var(--colorP);
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
+
+}
+
+#logo{
+    float: left;
+    height: 100%;
+    width: 80px;
+    background-image: url("imagenes/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
+
+}
+
+#meloTrabaja{
+    position: relative;
+    height: 100%;
+    width: 33%;
+    left: 33%;
+    cursor: default;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    font-size: 25px;
+    /*padding: 4px 119px;*/
+}
+
+#meloTrabaja h1{
+    padding-top: 4px;
+    display: inline-block;
+    left: 0px;
+}
+
+/* CERRAR ENCABEZADO
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+
+/* ABRIR BARRA
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+#barra{
+    background-color: #F8F8FF;
+    position: relative;
+    height: 5%;
+    /* border-top: 2px solid gray;
+    border-bottom: 2px solid gray; */
+    box-shadow: 0px 1px 5px #999;
+}
+
+
+
+
+/* CERRAR BARRA
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+                                    
+/* ABRIR CONTENIDO
+––––––––––––––––––––––––––––––––––––––––––––––––––*/                                    
+#contenidoGen{
+    height: 83%;
+    /* border-bottom: 2px solid gray; */
+    /* background-color: #f7f7f7; */
+    box-shadow: 0px -1px 5px #999;
+    background-image: url("imagenes/fondo1.png");
+}
+
+#bordeContenido {
+    position: relative;
+    left: 2%;
+    width: 95%; 
+    height: 90%;
+    top: 5%;
+    border: 2px solid rgba(0,0,0,0.1); 
+    /* background-color: white; */
+    background-image: url("imagenes/1pxblanco090.png");
+    box-shadow: 0px 2px 5px #f7f7f7;
+}
+
+.separacionContenido{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    /*border-bottom: 1px solid black;*/
+    
+}
+
+#contenidoTop{
+    border-bottom: 3px solid #f7f7f7;
+}
+
+.publicaciones{
+    background-color: rgba(24, 119, 242, 0.05);
+    height: 15%;
+    width: 99.5%;
+    margin-top: 8px;
+    border: 0.5px solid rgba(0,0,0,0.30);
+    box-shadow: 0px 0.2px 5px #999;
+}
+.titulo{
+    font-weight: 400px;
+    position: relative;
+    float: left;
+    left: 45px;
+    color: black;
+    font-size: 90%;
+}
+.nombreuser{
+    position: absolute;
+    left: 45px;
+    top: 19px;
+    color: #A9A9A9;
+    font-size: 80%;
+}
+.fecha{
+    position: relative;
+    float: right;
+    right: 5px;
+    top: 19px;
+    color: #A9A9A9;
+    font-size: 80%;
+}
+.destacadas{
+    position: relative;
+    background-image: url("imagenes/adminicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.recientes{
+    position: relative;
+    background-image: url("imagenes/usuarioicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+/* CERRAR CONTENIDO
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+/* ABRIR PIE
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+#pie{
+    background-color: #eeeeee;
+    height: 4%;
+}
+/* CERRAR PIE
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+}
+
+
+#contenedor{
+    position: relative;
+    left: 15%;
+    top: 10%;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+}
+
+.boton span{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 3vh;
+}
+
+.boton:hover{
+    background-color: rgba(24, 119, 242, 0.1);
+    color: black;
+}
+
+
+.boton:active{
+    background-color: rgba(24, 119, 242, 0.9);
+}
+
+.contenido{
+    position: relative;
+    height: 0px;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 1);
+    overflow-y: scroll;
+}
+
+#contenidoPerfil{
+    width: 100%;
+}
+.cuadroImgPerfil{
+    left: 1%;
+    top: 5%;
+    background-image: url(imagenes/iconPerfil.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+#textosPerfil{
+    color: rgba(0, 0, 0, 0.9);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+#textosPerfil table{
+    position: relative;
+    top: 25px;
+    left: 19%;
+}
+
+#textosPerfil table td{
+    padding: 10px 5px 9px;
+}
+
+.nomDatoPerfil{
+    color: black;
+}
+
+.datoPerfil{
+    color: rgba(0, 0, 0, 0.7);
+}
+.cuadroDescPerfil{
+    background-color: #F8F8FF;
+    top: 5%;
+    left: 40%;
+    position: absolute;
+    height: 250px;
+    width: 55%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#robotMuestra{
+    top: 35%;
+    left: 30%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+#textoRobot{
+    top: 15%;
+    left: 56%;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#infoRobot{
+    top: auto;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    transition: opacity 500ms;
+    overflow: hidden;
+    background-image: url("imagenes/RobotMuestra.png");
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+
+
+
+.buscar{
+    top: -12%;
+    left: 81%;
+    position: absolute;
+    padding: 5px;
+
+}
+
+.buscar input{
+    border: none;
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border-radius: 30px;
+    transition: all 500ms ease;
+}
+
+.buscar input:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
+
+.buscar input:focus{
+        box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
+.btn{
+    border-color: transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 52px;
+    height: 40px;
+    line-height: 55px;
+}
+
+.buscar:hover input{
+    width: 240px;
+    
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+#iconoLupa{
+
+    width: 15px;
+
+}

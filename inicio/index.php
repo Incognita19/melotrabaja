@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.js"></script>
     <script src="../bdd/datos.js"></script>
-    
+    <script src="https://kit.fontawesome.com/7241c4e3dc.js" crossorigin="anonymous"></script>
     <title>Inicio</title>
 </head>
 <body>
@@ -19,6 +19,19 @@
                 <div id="logo"></div>
                 <h1>MELOTRABAJA</h1> 
             </div>
+
+
+
+
+        <button class="switch-LD id="switch-LD">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fa-solid fa-moon"></i></span>
+        </button>
+
+
+
+
+        
         </div>
 
 
@@ -54,28 +67,22 @@
         <div class="fila" id="contenido">
             <div id="bordeContenido">
                 <div id="contenidoTop" class="separacionContenido">
-                <h3>PUBLICACIONES FIJADAS</h3>
-                <div class="publicaciones fijadas" >
-                        <p class="titulo">Reprehenderit ut quos aute excepteur temporibus </p>
-                        <p class="nombreuser">Adm1</p>
-                        <p class="fecha">10/08/2021</p>
-                    </div>
+                    <h3>PUBLICACIONES FIJADAS</h3>
 
+
+
+                    </div>
+                <div id="contenidoBot" class="separacionContenido">
+                    <h3>PUBLICACIONES RECIENTES</h3>
+
+
+                    
+
+                </div>
+
+            </div>
 
         </div>
-                <div class="separacionContenido">
-                <h3>PUBLICACIONES RECIENTES</h3>
-                    <div class="publicaciones recientes">
-                        <p class="titulo">Et quia omnis nemo molestias cu</p>
-                        <p class="nombreuser">User1</p>
-                        <p class="fecha">30/12/2021</p>
-                    </div>
-
-                    </div>
-                </div>
-            </div>
-
-            </div>
 
 
         <div class="loginContenedor" id="loginContenedor">
@@ -129,5 +136,11 @@
 
 
 <script src="eventos.js"></script>
+    <script>
+        publicaciones = publicaciones.sort((a,b)=>compararFechas(a,b));
+        cargarFijadas(publicaciones);
+        cargarRecientes(publicaciones);
+    </script>
+
 </body>
 </html>

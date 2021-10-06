@@ -253,6 +253,36 @@ p{
     width: 100%;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 768px) {
 
 
@@ -414,6 +444,34 @@ p{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 769px) {
 
 /* ABRIR ENCABEZADO
@@ -544,13 +602,13 @@ p{
     font-size: 50px;
     position: relative;
     float: left;
-    left: 45px;
+    left: 50px;
     color: black;
     font-size: 90%;
 }
 .nombreuser{
     position: absolute;
-    left: 45px;
+    left: 50px;
     top: 19px;
     color: #A9A9A9;
     font-size: 80%;
@@ -563,9 +621,15 @@ p{
     color: #A9A9A9;
     font-size: 80%;
 }
+
+.foto_usuario{
+    width: 44px;
+    height: 44px;
+    border-radius: 40px;
+    border: 1px solid black;
+}
 .fijadas{
     position: relative;
-    background-image: url("imagenes/adminicon.png");
     background-size: contain;
     background-repeat: no-repeat;
     float: left;
@@ -573,7 +637,6 @@ p{
 
 .recientes{
     position: relative;
-    background-image: url("imagenes/usuarioicon.png");
     background-size: contain;
     background-repeat: no-repeat;
     float: left;
