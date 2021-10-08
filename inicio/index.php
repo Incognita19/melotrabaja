@@ -20,18 +20,6 @@
                 <h1>MELOTRABAJA</h1> 
             </div>
 
-
-
-
-        <button class="switch-LD id="switch-LD">
-            <span><i class="fas fa-sun"></i></span>
-            <span><i class="fa-solid fa-moon"></i></span>
-        </button>
-
-
-
-
-        
         </div>
 
 
@@ -52,14 +40,11 @@
         <input type="text" placeholder="Buscar" required>
                 <div class="btn"> 
         <img id="iconoLupa" src="imagenes/lupa.png" alt="">
-
                 </div>
 
             </div>
 
         </div>
-
-
 
 
 

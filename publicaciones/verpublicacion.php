@@ -37,10 +37,65 @@
 </div>
 </div>
 <!-- DIV CONTENIDO -->
-<div class="fila" id="contenidoGen">
-    <div id="bordeContenido">
-</div>
-</div>
+    <div class="fila" id="contenidoGen">
+        <div id="bordeContenido">
+
+            <div id="publicacion">
+                <div class="tituloPublicacion"><h4>Ap #712-9990 Ipsum Road</h4></div>
+                <div class="fechaPublicacion">Oct 25, 2020</div>
+                <div class="textoPublicacion"> Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibu
+                    s eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    aucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id. Donec non lacus diam.
+                Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urn
+                    a. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibu
+                    s eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    aucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id. Donec non lacus diam.
+                Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urn
+                    a. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibu
+                    s eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    aucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id. Donec non lacus diam.
+                Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urn
+                    a. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibu
+                    s eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    aucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id. Donec non lacus diam.
+                Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urn
+                    a. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibu
+                    s eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    aucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id. Donec non lacus diam.
+                Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urn
+                    a. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibu
+                    s eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urna. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f
+                    aucibus sem pulvinar vel. Curabitur viverra nisl dui, a venenatis felis pellentesque id. Donec non lacus diam.
+                Lorem ipsum dolor sit amet, consectetur adip
+                    iscing elit. Nullam vestibulum orci a sapien imperdiet maximus. Suspendisse vel ex eget mauris efficitur finibus eu a enim. Aenean tellus neque, consectetur sit amet lacus a, hendrerit ornare urn
+                    a. Fusce venenatis lorem vitae augue suscipit, eu tempor massa vulputate. Praesent iaculis velit libero, vel f</div>
+            </div>
+            
+            <div id="barraContenido">
+                <div class="fotoPerfil"></div>
+                <div class="nombrePerfil">Saebyeok19</div>
+
+                    <button id="botonPerfil">Perfil</button>
+                    <button id="botonMD">Mensaje</button>
+            </div>
+        </div>
+    </div>
 <div class="loginContenedor" id="loginContenedor">
 <div id="BarraLateral" >
         <div class="btn-cerrar">
