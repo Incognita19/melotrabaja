@@ -16,15 +16,15 @@
     <div id="meloTrabaja">
         <div id="logo"></div>
         <h1>MELOTRABAJA</h1> 
-                            <div class="container-btn-mode">
-                    <div id="id-sun" class="btn-mode sun active">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <div id="id-moon" class="btn-mode moon">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    </div>
     </div>
+                    <div class="container-btn-mode">
+                <div id="id-sun" class="btn-mode sun active">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div id="id-moon" class="btn-mode moon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                </div>
     <div class="area" >
             <ul class="circles">
                     <li></li>
@@ -128,7 +128,7 @@
 
 
     </div>
-    <div id="prueba1">
+    <div id="contenedorFondo">
 
 <svg version="1.1" id="home-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 1820 1080" style="enable-background:new 0 0 1820 1080;" xml:space="preserve">

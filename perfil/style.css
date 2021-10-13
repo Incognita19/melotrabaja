@@ -289,6 +289,7 @@ p{
     border:1px solid white;
     color:white;
 }
+.dark-mode p{color: white;}
 .dark-mode #encabezado{background-color: gray;
 }
 .dark-mode #barra{background-color: rgb(78, 78, 78);
@@ -318,7 +319,13 @@ p{
 .dark-mode .nombrePerfil{color: black;
 }
 
+.dark-mode .contenido{
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
+.dark-mode .cuadroDescPerfil{
+    background-color: rgba(97, 97, 97, 0.8);
+}
 
 
 #logo{
@@ -615,8 +622,7 @@ p{
     font-size: 15px;
     color: black;
     outline: none;
-    border-radius: 30px;
-    transition: all 500ms ease;
+    border-radius: 30px;;
 }
 
 .buscar input:hover{
@@ -799,7 +805,7 @@ p{
 
 
 
-#prueba1{
+#contenedorFondo{
     z-index: 0;
     position: relative;
     top: -110%;

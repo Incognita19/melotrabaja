@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+#page{
+    height: 100%;
+}
 ul {
     padding: 0;
     width: 100%;
@@ -17,7 +20,7 @@ ul {
   li:last-child a { margin-right: 0;
   }
   
-  a:link, a:visited, a:focus { background: white;
+  a:link, a:visited, a:focus {
   }
   
   a:hover { background: rgba(65, 255, 245, 0.1);
@@ -323,6 +326,98 @@ p{
 
 }
 
+.container-btn-mode{
+    position: absolute;
+    top:20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 2;
+    font-size:0;
+  }
+  .btn-mode{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border:2px solid black;
+    transition: background-color .5s;
+  }
+  .btn-mode i {
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .btn-mode.sun{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid transparent;
+  }
+  .btn-mode.moon{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .active{
+    background-color:black;
+    color:#ffffff !important;
+  }
+  
+.dark-mode{transition:background-color .5s;
+  }
+.dark-mode .btn-mode{
+    background-color:#1A1C1E;
+    border:1px solid white;
+    color:white;
+}
+.dark-mode p{color: white;}
+.dark-mode #encabezado{background-color: gray;
+}
+.dark-mode #barra{background-color: rgb(78, 78, 78);
+}
+.dark-mode #pie{  background-color: rgb(78, 78, 78);
+}
+.dark-mode #contenedorFondo{   background-color: black;
+}
+.dark-mode .buscar input{  background-color: rgb(53, 52, 52);
+}
+.dark-mode #barraContenido{  background:  rgba(255, 255, 255, 0.5);
+}
+.dark-mode #BarraLateral{  background:  rgb(78, 78, 78);
+}
+.dark-mode #BarraLateral p{  color: black;
+}
+.dark-mode a:link, a:visited .boton{  background-color: rgba(255, 255, 255, 0.5);
+}
+.dark-mode .logo{background-color: black;
+}
+.dark-mode #red{ stroke: white;
+}
+.dark-mode #light-blue{ stroke: gray;
+}
+.dark-mode #blue{ stroke: gainsboro;
+}
+.dark-mode .nombrePerfil{color: black;
+}
+.dark-mode .contenido{background-color: rgba(255, 255, 255, 0.5);
+}
+.dark-mode .cuadroDescPerfil{background-color: rgba(97, 97, 97, 0.8);
+}
+.dark-mode #contenidoTop{border-bottom: 3px solid rgba(0, 0, 0, 0.2);;
+}
+.dark-mode #openLogin{background-color: rgb(53, 52, 52);
+}
+.dark-mode #closeLogin{background-color: rgb(53, 52, 52);
+}
+.dark-mode .login{
+    background-color: rgba(0,0,0,0.70);
+}
+.dark-mode .login h1{color: white;
+}
+.dark-mode #bordeContenido a:link{
+    background-color: transparent;
+}
+.dark-mode .publicaciones{
+   background-color: rgba(105, 105, 105, 0.3);
+}
 #logo{
     float: left;
     height: 100%;
@@ -519,7 +614,6 @@ p{
     color: black;
     outline: none;
     border-radius: 30px;
-    transition: all 500ms ease;
 }
 
 .buscar input:hover{
@@ -726,7 +820,7 @@ body{
 
 
 
-#prueba1{
+#contenedorFondo{
     z-index: 0;
     position: relative;
     top: -110%;

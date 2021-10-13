@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.js"></script>
     <script src="../bdd/datos.js"></script>
-    <script src="https://kit.fontawesome.com/7241c4e3dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <title>MeloTrabaja</title>
 </head>
 <body>
@@ -15,18 +15,19 @@
         <!-- DIVS -->
         <!-- DIV ENCABEZADO-->
         <div class="fila" id="encabezado">
-            <div id="meloTrabaja">
-                <div id="logo"></div>
-                <h1>MELOTRABAJA</h1> 
-                <div class="container-btn-mode">
+    <div id="meloTrabaja">
+        <div id="logo"></div>
+        <h1>MELOTRABAJA</h1> 
+    </div>
+                    <div class="container-btn-mode">
                 <div id="id-sun" class="btn-mode sun active">
                     <i class="fas fa-sun"></i>
                 </div>
                 <div id="id-moon" class="btn-mode moon">
                     <i class="fas fa-moon"></i>
                 </div>
-            </div>
-            <div class="area" >
+                </div>
+    <div class="area" >
             <ul class="circles">
                     <li></li>
                     <li></li>
@@ -40,7 +41,7 @@
                     <li></li>
             </ul>
     </div >
-        </div>
+    </div>
 
 
         <!-- DIV BARRA-->
@@ -87,7 +88,7 @@
                 </div>
 
             </div>
-            <div id="prueba1">
+            <div id="contenedorFondo">
 
                     <svg version="1.1" id="home-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 1820 1080" style="enable-background:new 0 0 1820 1080;" xml:space="preserve">
