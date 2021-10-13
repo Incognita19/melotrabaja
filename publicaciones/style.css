@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+#page{
+    height: 100%;
+
+}
 ul {
     padding: 0;
     width: 100%;
@@ -72,6 +76,7 @@ ul {
     cursor: pointer;
 }
 .loginContenedor{
+    z-index: 1;
     opacity: 0;
     display: flex;
     background-color: rgb(105,105,105, 0.6);
@@ -215,7 +220,7 @@ html,body{
     width: 100%;
     height: 100%;
 }
-h1,h3{
+h1,h3,h4{
     margin-top: 0px; 
     margin-right: 0px;
     font-weight: bolder;
@@ -228,169 +233,15 @@ p{
     width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+
+
 
 
 /* ABRIR ENCABEZADO
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 #encabezado{
-    position: relative;
-    height: 5%;
-    background-color: var(--colorP);
-    /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
-
-}
-
-
-#logo{
-    background-image: url("imagenes/logo.png");
-    background-size: 45px;
-    background-repeat: no-repeat;
-    background-position: 20%;
-
-}
-
-#meloTrabaja{
-    font-family: 'Acme', sans-serif;
-    color: white;
-    font-size: 11px;
-    padding: 4px 119px;
-}
-
-/* CERRAR ENCABEZADO
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-
-
-
-
-/* ABRIR BARRA
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-#barra{
-    background-color: #F8F8FF;
-    position: relative;
-    height: 5%;
-    /* border-top: 2px solid gray;
-    border-bottom: 2px solid gray; */
-    box-shadow: 0px 1px 5px #999;
-}
-
-
-
-
-/* CERRAR BARRA
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-
-
-                                    
-/* ABRIR contenidoGen
-––––––––––––––––––––––––––––––––––––––––––––––––––*/                                    
-#contenidoGen{
-    height: 85%;
-    /* border-bottom: 2px solid gray; */
-    /* background-color: #f7f7f7; */
-    box-shadow: 0px -1px 5px #999;
-    
-}
-
-#bordeContenido {
-    position: relative;
-    width: 100%; 
-    height: 90%;
-    top: 5%;
-    /* border: 0.5px solid rgba(0,0,0,0.20); */
-    /* background-color: white; */
-    background-image: url("imagenes/1pxblanco090.png");
-    opacity: 90%;
-    /* box-shadow: 0px 2px 5px #f7f7f7; */
-}
-
-.separacionContenido{
-    position: relative;
-    width: 100%;
-    height: 50%;
-    /*border-bottom: 1px solid black;*/
-    
-}
-
-#contenidoTop{
-    border-bottom: 3px solid #f7f7f7;
-}
-
-.publicaciones{
-    height: 15%;
-    width: 99.5%;
-    margin-top: 8px;
-    border: 0.5px solid rgba(0,0,0,0.30);
-    box-shadow: 0px 0.2px 5px #999;
-}
-.titulo{
-    position: relative;
-    float: left;
-    left: 45px;
-    color: #707070;
-    font-size: 90%;
-}
-.nombreuser{
-    position: absolute;
-    left: 45px;
-    top: 19px;
-    color: #A9A9A9;
-    font-size: 80%;
-}
-.fecha{
-    position: relative;
-    float: right;
-    right: 5px;
-    top: 19px;
-    color: #A9A9A9;
-    font-size: 80%;
-}
-.destacadas{
-
-    position: relative;
-    background-image: url("imagenes/adminicon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    float: left;
-}
-
-.recientes{
-    position: relative;
-    background-image: url("imagenes/usuarioicon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    float: left;
-}
-/* CERRAR CONTENIDO
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-
-
-
-/* ABRIR PIE
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-#pie{
-    background-color: #eeeeee;
-    height: 5%;
-}
-/* CERRAR PIE
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-
-
-
-
-}
-
-
-
-@media only screen and (min-width: 769px) {
-
-/* ABRIR ENCABEZADO
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-
-#encabezado{
+    overflow: hidden;
     position: relative;
     height: 8%;
     width: 100%;
@@ -398,6 +249,80 @@ p{
     /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
 
 }
+
+.container-btn-mode{
+    position: absolute;
+    top:20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 2;
+    font-size:0;
+  }
+  .btn-mode{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border:2px solid black;
+    transition: background-color .5s;
+  }
+  .btn-mode i {
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+  }
+  .btn-mode.sun{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid transparent;
+  }
+  .btn-mode.moon{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .active{
+    background-color:black;
+    color:#ffffff !important;
+  }
+  
+.dark-mode{transition:background-color .5s;
+  }
+.dark-mode .btn-mode{
+    background-color:#1A1C1E;
+    border:1px solid white;
+    color:white;
+}
+.dark-mode #encabezado{background-color: gray;
+}
+.dark-mode #barra{background-color: rgb(78, 78, 78);
+}
+.dark-mode #pie{  background-color: rgb(78, 78, 78);
+}
+.dark-mode #contenedorFondo{   background-color: black;
+}
+.dark-mode .buscar input{  background-color: rgb(53, 52, 52);
+}
+.dark-mode #barraContenido{  background:  rgba(255, 255, 255, 0.5);
+}
+.dark-mode #BarraLateral{  background:  rgb(78, 78, 78);
+}
+.dark-mode #BarraLateral p{  color: black;
+}
+.dark-mode a:link, a:visited .boton{  background-color: rgba(255, 255, 255, 0.5);
+}
+.dark-mode .logo{background-color: black;
+}
+.dark-mode #red{ stroke: white;
+}
+.dark-mode #light-blue{ stroke: gray;
+}
+.dark-mode #blue{ stroke: gainsboro;
+}
+.dark-mode .nombrePerfil{color: black;
+}
+
+
+
 
 #logo{
     float: left;
@@ -437,6 +362,7 @@ p{
 /* ABRIR BARRA
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 #barra{
+    overflow: hidden;
     background-color: #F8F8FF;
     position: relative;
     height: 5%;
@@ -458,14 +384,16 @@ p{
 /* ABRIR CONTENIDO
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/                                    
 #contenidoGen{
+    overflow: hidden;
     height: 83%;
     /* border-bottom: 2px solid gray; */
     /* background-color: #f7f7f7; */
     box-shadow: 0px -1px 5px #999;
-    background-image: url("imagenes/fondo1.png");
+    /* background-image: url("imagenes/fondo1.png"); */
 }
 
 #bordeContenido {
+    z-index: 1;
     position: relative;
     left: 2%;
     width: 95%; 
@@ -473,7 +401,7 @@ p{
     top: 5%;
     border: 2px solid rgba(0,0,0,0.1); 
     /* background-color: white; */
-    background-color: rgba(250, 250, 250, 0.91);
+    background-color: rgba(250, 250, 250, 0.5);
     box-shadow: 0px 2px 5px #f7f7f7;
 }
 
@@ -643,7 +571,7 @@ p{
 
 
 
-}
+
 
 
 #contenedor{
@@ -766,6 +694,13 @@ p{
 
 
 
+
+
+
+
+/* Barra de buscar
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
 .buscar{
     top: -12%;
     left: 81%;
@@ -783,7 +718,6 @@ p{
     color: black;
     outline: none;
     border-radius: 30px;
-    transition: all 500ms ease;
 }
 
 .buscar input:hover{
@@ -820,3 +754,247 @@ p{
     width: 15px;
 
 }
+
+
+
+/* Barra de buscar
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animacion del encabezado 
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
+
+/* Animacion del encabezado 
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+
+
+#contenedorFondo{
+    z-index: 0;
+    position: relative;
+    top: -110%;
+}
+
+#home {
+    clip-path: url(#cache);
+  }
+  
+  #red {
+    fill: none;
+    opacity: 0.15;
+    stroke: darkturquoise;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+  
+  #blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: var(--colorP);
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  #light-blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: var(--colorP);
+    stroke-width: 6;
+    stroke-miterlimit:10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;    
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+   }
+      }
+  
+  @keyframes show {
+    0% {
+      opacity: 0.15;
+   }
+    50% {
+      opacity: 0.2;
+   }
+    100% {
+      opacity: 0.15;
+   }
+      }
