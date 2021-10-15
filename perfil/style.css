@@ -212,10 +212,15 @@ ul {
 
 
 *{
+    transition: 150ms ease all;
     margin: 0px;
     padding: 0px;
 }
-html,body{
+body{
+    width: 100%;
+    height: 100%;
+}
+html{
     width: 100%;
     height: 100%;
 }
@@ -245,7 +250,7 @@ p{
     width: 100%;
     background-color: var(--colorP);
     /* background: radial-gradient(circle, rgba(255,255,255,1) 36%, rgba(238,238,238,1) 80%); */
-
+    
 }
 .container-btn-mode{
     position: absolute;
@@ -290,7 +295,7 @@ p{
     color:white;
 }
 .dark-mode p{color: white;}
-.dark-mode #encabezado{background-color: gray;
+.dark-mode #encabezado{background-color: rgb(2, 36, 80);  
 }
 .dark-mode #barra{background-color: rgb(78, 78, 78);
 }
@@ -300,9 +305,9 @@ p{
 }
 .dark-mode .buscar input{  background-color: rgb(53, 52, 52);
 }
-.dark-mode #barraContenido{  background:  rgba(255, 255, 255, 0.5);
+.dark-mode #barraContenido{ background-color:  rgb(2, 36, 80);
 }
-.dark-mode #BarraLateral{  background:  rgb(78, 78, 78);
+.dark-mode #BarraLateral{  background-color:  rgb(78, 78, 78);
 }
 .dark-mode #BarraLateral p{  color: black;
 }
@@ -310,11 +315,11 @@ p{
 }
 .dark-mode .logo{background-color: black;
 }
-.dark-mode #red{ stroke: white;
+.dark-mode #red{ stroke:rgb(126, 126, 126);
 }
-.dark-mode #light-blue{ stroke: gray;
+.dark-mode #light-blue{ stroke: whitesmoke;
 }
-.dark-mode #blue{ stroke: gainsboro;
+.dark-mode #blue{ stroke: rgb(2, 36, 80);
 }
 .dark-mode .nombrePerfil{color: black;
 }

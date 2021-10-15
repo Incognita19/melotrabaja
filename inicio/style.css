@@ -238,6 +238,7 @@ ul {
 
 
 *{
+    transition: 150ms ease all;
     margin: 0px;
     padding: 0px;
 }
@@ -369,7 +370,7 @@ p{
     color:white;
 }
 .dark-mode p{color: white;}
-.dark-mode #encabezado{background-color: gray;
+.dark-mode #encabezado{background-color: rgb(2, 36, 80);
 }
 .dark-mode #barra{background-color: rgb(78, 78, 78);
 }
@@ -389,11 +390,11 @@ p{
 }
 .dark-mode .logo{background-color: black;
 }
-.dark-mode #red{ stroke: white;
+.dark-mode #red{ stroke:rgb(126, 126, 126);
 }
-.dark-mode #light-blue{ stroke: gray;
+.dark-mode #light-blue{ stroke: whitesmoke;
 }
-.dark-mode #blue{ stroke: gainsboro;
+.dark-mode #blue{ stroke: rgb(2, 36, 80);
 }
 .dark-mode .nombrePerfil{color: black;
 }

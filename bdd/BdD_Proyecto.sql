@@ -1,6 +1,24 @@
 
 
+DROP DATABASE IF EXISTS melotrabaja;
+CREATE DATABASE melotrabaja;
+USE melotrabaja;
 --Esta entidad contiene los atributos del perfil del usuario en la aplicación--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 create table PERFIL(
 nombre_ususario varchar (12) not null unique,
