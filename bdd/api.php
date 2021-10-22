@@ -87,6 +87,7 @@
         public $nombreuser;
         public $titulo;
         public $hora;
+        public $fijadas;
     }
 
     /**
@@ -127,7 +128,7 @@
         $basededatos = CrearConexion();
         $respuesta = new Respuesta;
 
-        $consulta = "SELECT nombreuser,hora,titulo from publicacion";
+        $consulta = "SELECT nombreuser,hora,titulo,fijadas,id_publicaciones from publicacion";
 
         $datos = $basededatos->conexion->query($consulta);
  
@@ -140,6 +141,8 @@
                 $publicacion->nombreuser = $fila['nombreuser'];
                 $publicacion->hora = $fila['hora'];
                 $publicacion->titulo = $fila['titulo'];
+                $publicacion->fijadas = $fila['fijadas'];
+                $publicacion->id_publicaciones = $fila['id_publicaciones'];
                 //$publicacion->contenido = $fila['contenido'];
                 
                 array_push($respuesta->datos, $publicacion);
