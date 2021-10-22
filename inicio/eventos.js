@@ -135,99 +135,106 @@ closeLogin.addEventListener('click', () => {
         return 0;
     }
 
+    const divcontenidoTop = document.getElementById("contenidoTop");
+    const divcontenidoBot = document.getElementById("contenidoBot");
 
 
-    function cargarFijadas(publicaciones) {
+
+     function cargarFijadas(publicaciones) {
         
-        const divcontenidoTop = document.getElementById("contenidoTop");
+        $.ajax(
+            {
+                //1 - Indicar la URL de donde se obtienen los datos
+                url:"../bdd/api.php",
+                //2 - Método para el envío de los datos, puede ser 'GET' o 'POST'
+                method: "POST",
+                //3 - Indicar la forma que tendran los datos, en este caso es 'json'
+                datatype: "json",
+                //4 - Indicar los datos que se incluirán. 
+                // Primero se indica el nombre del dato esperado por la página y luego el dato
+                data:{
+                    },
+                //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
+                success:function (datos) {
+                    
+                    console.log(datos);
+                
+                    if (datos.Respuesta.estado == "OK") {
+                        publicaciones = datos.Respuesta.datos;
+    
+                        publicaciones.forEach(publicacion => {
 
-        publicaciones.forEach(publicacion => {
-            
-            if (publicacion.fijada=="si") {
+                            if (publicacion.fijada=="si") {
               
-                
-            divPublicacion = document.createElement('div');
-            divPublicacion.classList.add('publicaciones', 'fijadas');
-            
-            alink=document.createElement("a");
-            texto=document.createTextNode(publicacion.titulo);
-            alink.appendChild(texto);
-            alink.href="/proyecto/melotrabaja/publicaciones/verpublicacion.php?id_publicacion="+publicacion.id_publicacion;
-
-            ptitulo = document.createElement('p');
-            ptitulo.classList.add('titulo');
-            ptitulo.appendChild(alink);
-                
-
-            pnombreuser = document.createElement('p');
-            pnombreuser.classList.add('nombreuser');
-            pnombreuser.textContent=publicacion.nombreuser;
-
-            pfecha = document.createElement('p');
-            pfecha.classList.add('fecha');
-            pfecha.textContent=publicacion.fecha;
-
-            divfoto_usuario = document.createElement('div');
-            divfoto_usuario.classList.add('foto_usuario');
-            divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
-            
-            divPublicacion.appendChild(ptitulo);
-            divPublicacion.appendChild(pnombreuser);
-            divPublicacion.appendChild(pfecha);
-            divPublicacion.appendChild(divfoto_usuario);
-
-            divcontenidoTop.appendChild(divPublicacion);
-            
+                                divPublicacion = document.createElement('div');
+                                divPublicacion.classList.add('publicaciones', 'fijadas');
+                    
+                                alink=document.createElement("a");
+                                texto=document.createTextNode(publicacion.titulo);
+                                alink.appendChild(texto);
+                                alink.href="/proyecto/melotrabaja/publicaciones/verpublicacion.php?id_publicacion="+publicacion;
+                                ptitulo = document.createElement('p');
+                                ptitulo.classList.add('titulo');
+                                ptitulo.appendChild(alink);
+                  
+                                pnombreuser = document.createElement('p');
+                                pnombreuser.classList.add('nombreuser');
+                                pnombreuser.textContent=publicacion.
+                                pfecha = document.createElement('p');
+                                pfecha.classList.add('fecha');
+                                pfecha.textContent=publicacion.
+                                divfoto_usuario = document.createElement('div');
+                                divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
+                                divfoto_usuario.classList.add('foto_usuario');
+                              
+                                divPublicacion.appendChild(ptitulo);
+                                divPublicacion.appendChild(pnombreuser);
+                                divPublicacion.appendChild(pfecha);
+                                divPublicacion.appendChild(divfoto_usuario);
+                  
+                                divcontenidoTop.appendChild(divPublicacion);
+                              
+                                }
+                                else{
+                                    divPublicacion = document.createElement('div');
+                                    divPublicacion.classList.add('publicaciones', 'recientes');
+                            
+                                    ptitulo = document.createElement('p');
+                                    ptitulo.classList.add('titulo');
+                                    ptitulo.textContent=publicacion.titulo;
+                            
+                                    pnombreuser = document.createElement('p');
+                                    pnombreuser.classList.add('nombreuser');
+                                    pnombreuser.textContent=publicacion.nombreuser;
+                        
+                                    pfecha = document.createElement('p');
+                                    pfecha.classList.add('fecha');
+                                    pfecha.textContent=publicacion.fecha;
+                        
+                                    divfoto_usuario = document.createElement('div');
+                                    divfoto_usuario.classList.add('foto_usuario');
+                                    divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
+                        
+                                    divPublicacion.appendChild(ptitulo);
+                                    divPublicacion.appendChild(pnombreuser);
+                                    divPublicacion.appendChild(pfecha);
+                                    divPublicacion.appendChild(divfoto_usuario);
+                        
+                                    divcontenidoBot.appendChild(divPublicacion);
+                            
+                                }
+                        });
+                    }
+                },
+                //6 - Establecemos una función que se ejecuta en caso de error
+                error:function(errorThrown){
+                    console.error("ERROR:" + errorThrown.responseText);
+                }
             }
+        );
 
+}
 
-        });
-
-
-// ____________________________________________________________________________________
-
-//                  -- RECIENTES --
-// ____________________________________________________________________________________
-
-    }
-
-    function cargarRecientes(publicaciones) {
-
-        const divcontenidoBot = document.getElementById("contenidoBot");
-
-        publicaciones.forEach(publicacion => {
-     
-            divPublicacion = document.createElement('div');
-            divPublicacion.classList.add('publicaciones', 'recientes');
-    
-            ptitulo = document.createElement('p');
-            ptitulo.classList.add('titulo');
-            ptitulo.textContent=publicacion.titulo;
-    
-            pnombreuser = document.createElement('p');
-            pnombreuser.classList.add('nombreuser');
-            pnombreuser.textContent=publicacion.nombreuser;
-
-            pfecha = document.createElement('p');
-            pfecha.classList.add('fecha');
-            pfecha.textContent=publicacion.fecha;
-
-            divfoto_usuario = document.createElement('div');
-            divfoto_usuario.classList.add('foto_usuario');
-            divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
-
-            divPublicacion.appendChild(ptitulo);
-            divPublicacion.appendChild(pnombreuser);
-            divPublicacion.appendChild(pfecha);
-            divPublicacion.appendChild(divfoto_usuario);
-
-            divcontenidoBot.appendChild(divPublicacion);
-    
-        });
-
-
-
-    }
 
 
 
@@ -245,3 +252,5 @@ document.getElementById('id-sun').onclick = function(){
     document.getElementById('id-sun').classList.remove('active')
     this.classList.add('active')
   }
+
+ 

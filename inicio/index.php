@@ -10,6 +10,7 @@ autor.nacionalidad = 'Estonia';
 -->
 
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -269,8 +270,7 @@ autor.nacionalidad = 'Estonia';
 <script src="eventos.js"></script>
     <script>
         publicaciones = publicaciones.sort((a,b)=>compararFechas(a,b));
-        cargarFijadas(publicaciones);
-        cargarRecientes(publicaciones);
+        cargarFijadas();
     </script>
 </div>
 </body>
