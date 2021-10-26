@@ -164,7 +164,7 @@ closeLogin.addEventListener('click', () => {
     
                         publicaciones.forEach(publicacion => {
 
-                            if (publicacion.fijada=="si") {
+                            if (publicacion.fijadas=="si") {
               
                                 divPublicacion = document.createElement('div');
                                 divPublicacion.classList.add('publicaciones', 'fijadas');
@@ -172,17 +172,17 @@ closeLogin.addEventListener('click', () => {
                                 alink=document.createElement("a");
                                 texto=document.createTextNode(publicacion.titulo);
                                 alink.appendChild(texto);
-                                alink.href="/proyecto/melotrabaja/publicaciones/verpublicacion.php?id_publicacion="+publicacion;
+                                alink.href="/proyecto/melotrabaja/publicaciones/verpublicacion.php?id_publicacion="+publicacion.id_publicaciones;
                                 ptitulo = document.createElement('p');
                                 ptitulo.classList.add('titulo');
                                 ptitulo.appendChild(alink);
                   
                                 pnombreuser = document.createElement('p');
                                 pnombreuser.classList.add('nombreuser');
-                                pnombreuser.textContent=publicacion.
+                                pnombreuser.textContent=publicacion.nombreuser;
                                 pfecha = document.createElement('p');
                                 pfecha.classList.add('fecha');
-                                pfecha.textContent=publicacion.
+                                pfecha.textContent=publicacion.hora;
                                 divfoto_usuario = document.createElement('div');
                                 divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
                                 divfoto_usuario.classList.add('foto_usuario');
@@ -209,7 +209,7 @@ closeLogin.addEventListener('click', () => {
                         
                                     pfecha = document.createElement('p');
                                     pfecha.classList.add('fecha');
-                                    pfecha.textContent=publicacion.fecha;
+                                    pfecha.textContent=publicacion.hora;
                         
                                     divfoto_usuario = document.createElement('div');
                                     divfoto_usuario.classList.add('foto_usuario');
