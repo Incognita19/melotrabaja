@@ -184,7 +184,7 @@ closeLogin.addEventListener('click', () => {
                                 pfecha.classList.add('fecha');
                                 pfecha.textContent=publicacion.hora;
                                 divfoto_usuario = document.createElement('div');
-                                divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
+                                divfoto_usuario.style.backgroundColor = publicacion.foto;
                                 divfoto_usuario.classList.add('foto_usuario');
                               
                                 divPublicacion.appendChild(ptitulo);
@@ -213,7 +213,7 @@ closeLogin.addEventListener('click', () => {
                         
                                     divfoto_usuario = document.createElement('div');
                                     divfoto_usuario.classList.add('foto_usuario');
-                                    divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
+                                    divfoto_usuario.style.backgroundColor = publicacion.foto;
                         
                                     divPublicacion.appendChild(ptitulo);
                                     divPublicacion.appendChild(pnombreuser);
@@ -234,7 +234,6 @@ closeLogin.addEventListener('click', () => {
         );
 
 }
-
 
 
 

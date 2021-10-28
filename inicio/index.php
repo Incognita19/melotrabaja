@@ -1,13 +1,3 @@
-<!-- 
-select Campos , Campos, Campos
-from A INNER JOIN B 
-where 
-A.DOC = B.A_ID
-AND
-libro.ISBN = escribe.libro_ISBN
-AND 
-autor.nacionalidad = 'Estonia'; 
--->
 
 
 

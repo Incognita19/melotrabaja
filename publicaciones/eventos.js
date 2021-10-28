@@ -141,6 +141,71 @@ function AgregarBoton(textoBoton,contenido) {
 
 
 
+function cargarPublicacion(publicacion) {
+        
+    $.ajax(
+        {
+            //1 - Indicar la URL de donde se obtienen los datos
+            url:"../bdd/api.php",
+            //2 - Método para el envío de los datos, puede ser 'GET' o 'POST'
+            method: "POST",
+            //3 - Indicar la forma que tendran los datos, en este caso es 'json'
+            datatype: "json",
+            //4 - Indicar los datos que se incluirán. 
+            // Primero se indica el nombre del dato esperado por la página y luego el dato
+            data:{
+                },
+            //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
+            success:function (datos) {
+                
+                console.log(datos);
+            
+                if (datos.Respuesta.estado == "OK") {
+                    publicacion = datos.Respuesta.datos;
+
+                    publicacion.forEach(publicacion => {
+
+                            divPublicacion = document.createElement('div');
+                            divPublicacion.classList.add('publicaciones');
+                
+                            texto=document.createTextNode(publicacion.titulo);
+                            ptitulo = document.createElement('p');
+                            ptitulo.classList.add('titulo');
+                            ptitulo.appendChild(alink);
+
+                            pcontenido = document.createElement('p');
+                            pcontenido.classList.add('textoPublicacion');
+                            pcontenido.textContent=publicacion.contenido;
+                            
+                            pfecha = document.createElement('p');
+                            pfecha.classList.add('fecha');
+                            pfecha.textContent=publicacion.hora;
+                            divfoto_usuario = document.createElement('div');
+                            divfoto_usuario.style.backgroundColor = publicacion.foto;
+                            divfoto_usuario.classList.add('foto_usuario');
+                          
+                            divPublicacion.appendChild(ptitulo);
+                            divPublicacion.appendChild(pnombreuser);
+                            divPublicacion.appendChild(pfecha);
+                            divPublicacion.appendChild(divfoto_usuario);
+              
+                            divcontenidoTop.appendChild(divPublicacion);
+                             
+                    });
+                }
+            },
+            //6 - Establecemos una función que se ejecuta en caso de error
+            error:function(errorThrown){
+                console.error("ERROR:" + errorThrown.responseText);
+            }
+        }
+    );
+
+}
+
+
+
+
  
 /*Si clicamos en el botón del sol, borrarémos la clase css dark-mode del div 
 con id page y se aplicará el estilo active al sol*/

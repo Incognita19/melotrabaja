@@ -3,16 +3,26 @@
 DROP DATABASE IF EXISTS melotrabaja;
 CREATE DATABASE melotrabaja;
 USE melotrabaja;
-/*
-/*Esta entidad contiene los atributos del perfil del usuario en la aplicación*/
+
+
+create table publicaciones(
+nombreuser varchar (12) not null,
+hora date not null,
+foto varchar (15) not null,
+titulo varchar (30) not null,
+id_publicaciones varchar (8) not null unique primary key,
+fijadas enum("si" , "no") not null default "no"
+);
 
 create table publicacion(
 nombreuser varchar (12) not null,
 hora date not null,
-titulo varchar (24) not null,
-id_publicaciones varchar (8) not null unique,
-fijadas enum("si" , "no") not null default "no"
+foto varchar (15) not null,
+titulo varchar (30) not null,
+contenido varchar (5000) not null,
+id_publicaciones varchar (8) not null unique primary key
 );
+
 
 create table usuario(
 nombreuser varchar (12) not null unique primary key,

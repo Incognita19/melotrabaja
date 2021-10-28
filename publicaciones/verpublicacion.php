@@ -265,6 +265,7 @@
     </div>
 <!-- /DIVS -->
 </div>
+    cargarPublicacion();
 <script src="eventos.js"></script>
 </body>
 </html>
