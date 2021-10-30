@@ -4,10 +4,8 @@
     $info = new Respuesta;
     $info->estado = "";
     $info->datos= "";
-    $info = obtenerpublicaciones();
-    $info = obtenerpublicacion();
     
-    /*if ($_POST) {
+    if ($_POST) {
         if (isset($_POST['modo']) ) {
             
             $modo = ValidarDatos($_POST['modo']);
@@ -15,19 +13,18 @@
             switch ($modo) {
                 //Modo 1: Listado de todos los libros
                 case '1':
-                    $info = VerLibros();
+                    $info = obtenerpublicaciones();
                     break;
                 //Modo 2: Buscar libros
                 case '2':
-                    $datoBusqueda = ValidarDatos($_POST['busqueda']);
-                    $info = BuscarLibros($datoBusqueda);
+                    $info = obtenerpublicacion();
                     break;
                 default:
                     # code...
                     break;
             }
         }
-    }*/
+    }
 
    $json = TransformarEnJSON($info);
     MostrarJSON($json);
@@ -174,10 +171,16 @@
     function obtenerpublicacion(){
         $basededatos = CrearConexion();
         $respuesta = new Respuesta;
+        
+        $publicacion = ValidarDatos($_POST['publicacion']);
+        $consulta = "SELECT nombreuser,hora,titulo,foto,contenido,id_publicaciones from publicacion where id_publicaciones = ?";
+        $sentencia = $basededatos->conexion->prepare($consulta);
+        $sentencia->bind_param("s",$publicacion);
+        $sentencia->execute();
 
-        $consulta = "SELECT nombreuser,hora,titulo,foto,contenido,id_publicaciones from publicacion";
+        $datos = $sentencia->get_result();
 
-        $datos = $basededatos->conexion->query($consulta);
+
  
         if ($datos->num_rows > 0) {
             $respuesta->estado = "OK";

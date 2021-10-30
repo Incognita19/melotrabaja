@@ -448,9 +448,9 @@ p{
 
 .fotoPerfil{
         top: 5%;
-        background-image: url(imagenes/iconPerfil.jpg);
+        /* background-image: url(imagenes/iconPerfil.jpg);
         background-size: 100%;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
         position: relative;
         height: 150px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);

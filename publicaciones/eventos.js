@@ -138,8 +138,9 @@ function AgregarBoton(textoBoton,contenido) {
 
 
 
-
-
+const divPublicacion = document.getElementById("publicacion");
+const barraContenido = document.getElementById("barraContenido");
+const botonPerfil = document.getElementById("botonPerfil");
 
 function cargarPublicacion(publicacion) {
         
@@ -154,6 +155,8 @@ function cargarPublicacion(publicacion) {
             //4 - Indicar los datos que se incluirán. 
             // Primero se indica el nombre del dato esperado por la página y luego el dato
             data:{
+                'modo': 2,
+                'publicacion': publicacion
                 },
             //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
             success:function (datos) {
@@ -165,31 +168,40 @@ function cargarPublicacion(publicacion) {
 
                     publicacion.forEach(publicacion => {
 
-                            divPublicacion = document.createElement('div');
-                            divPublicacion.classList.add('publicaciones');
-                
-                            texto=document.createTextNode(publicacion.titulo);
-                            ptitulo = document.createElement('p');
-                            ptitulo.classList.add('titulo');
-                            ptitulo.appendChild(alink);
 
+                
+
+                            ptitulo = document.createElement('h4');
+                            ptitulo.classList.add('tituloPublicacion');
+                            ptitulo.textContent=publicacion.titulo;
+                            divPublicacion.appendChild(ptitulo);
+
+                            pfecha = document.createElement('p');
+                            pfecha.classList.add('fechaPublicacion');
+                            pfecha.textContent=publicacion.hora;
+                            divPublicacion.appendChild(pfecha);
+                            
                             pcontenido = document.createElement('p');
                             pcontenido.classList.add('textoPublicacion');
                             pcontenido.textContent=publicacion.contenido;
+                            divPublicacion.appendChild(pcontenido);
                             
-                            pfecha = document.createElement('p');
-                            pfecha.classList.add('fecha');
-                            pfecha.textContent=publicacion.hora;
+ 
+
+
+
+
+                            pnombreuser = document.createElement('p');
+                            pnombreuser.classList.add('nombrePerfil');
+                            pnombreuser.textContent=publicacion.nombreuser;
+                            barraContenido.insertBefore(pnombreuser,botonPerfil);
+                            
                             divfoto_usuario = document.createElement('div');
                             divfoto_usuario.style.backgroundColor = publicacion.foto;
-                            divfoto_usuario.classList.add('foto_usuario');
-                          
-                            divPublicacion.appendChild(ptitulo);
-                            divPublicacion.appendChild(pnombreuser);
-                            divPublicacion.appendChild(pfecha);
-                            divPublicacion.appendChild(divfoto_usuario);
-              
-                            divcontenidoTop.appendChild(divPublicacion);
+                            divfoto_usuario.classList.add('fotoPerfil');
+                            barraContenido.insertBefore(divfoto_usuario,pnombreuser);
+
+
                              
                     });
                 }
@@ -203,7 +215,17 @@ function cargarPublicacion(publicacion) {
 
 }
 
-
+/**
+ * Permite obtener el valor de un parámetro pasado a la página mediante GET
+ * @returns El dato del primer parámetro incluído en la URL
+ */
+ function obtenerParametroURL() {
+    let paginaURL = window.location.href;
+    let datos = paginaURL.split('?');
+    parametro = datos[1].split('=');
+    parametro = parametro[1];
+    return parametro;
+}
 
 
  

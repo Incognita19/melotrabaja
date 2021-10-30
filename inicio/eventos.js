@@ -153,6 +153,7 @@ closeLogin.addEventListener('click', () => {
                 //4 - Indicar los datos que se incluirán. 
                 // Primero se indica el nombre del dato esperado por la página y luego el dato
                 data:{
+                    'modo': 1
                     },
                 //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
                 success:function (datos) {
@@ -199,10 +200,14 @@ closeLogin.addEventListener('click', () => {
                                     divPublicacion = document.createElement('div');
                                     divPublicacion.classList.add('publicaciones', 'recientes');
                             
+                                    alink=document.createElement("a");
+                                    texto=document.createTextNode(publicacion.titulo);
+                                    alink.appendChild(texto);
+                                    alink.href="/proyecto/melotrabaja/publicaciones/verpublicacion.php?id_publicacion="+publicacion.id_publicaciones;
                                     ptitulo = document.createElement('p');
                                     ptitulo.classList.add('titulo');
-                                    ptitulo.textContent=publicacion.titulo;
-                            
+                                    ptitulo.appendChild(alink);
+
                                     pnombreuser = document.createElement('p');
                                     pnombreuser.classList.add('nombreuser');
                                     pnombreuser.textContent=publicacion.nombreuser;
