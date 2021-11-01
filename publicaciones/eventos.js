@@ -138,9 +138,99 @@ function AgregarBoton(textoBoton,contenido) {
 
 
 
+const divPublicacion = document.getElementById("publicacion");
+const barraContenido = document.getElementById("barraContenido");
+const botonPerfil = document.getElementById("botonPerfil");
+
+<<<<<<< HEAD
+=======
+function cargarPublicacion(publicacion) {
+        
+    $.ajax(
+        {
+            //1 - Indicar la URL de donde se obtienen los datos
+            url:"../bdd/api.php",
+            //2 - Método para el envío de los datos, puede ser 'GET' o 'POST'
+            method: "POST",
+            //3 - Indicar la forma que tendran los datos, en este caso es 'json'
+            datatype: "json",
+            //4 - Indicar los datos que se incluirán. 
+            // Primero se indica el nombre del dato esperado por la página y luego el dato
+            data:{
+                'modo': 2,
+                'publicacion': publicacion
+                },
+            //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
+            success:function (datos) {
+                
+                console.log(datos);
+            
+                if (datos.Respuesta.estado == "OK") {
+                    publicacion = datos.Respuesta.datos;
+
+                    publicacion.forEach(publicacion => {
+
+
+                
+
+                            ptitulo = document.createElement('h4');
+                            ptitulo.classList.add('tituloPublicacion');
+                            ptitulo.textContent=publicacion.titulo;
+                            divPublicacion.appendChild(ptitulo);
+
+                            pfecha = document.createElement('p');
+                            pfecha.classList.add('fechaPublicacion');
+                            pfecha.textContent=publicacion.hora;
+                            divPublicacion.appendChild(pfecha);
+                            
+                            pcontenido = document.createElement('p');
+                            pcontenido.classList.add('textoPublicacion');
+                            pcontenido.textContent=publicacion.contenido;
+                            divPublicacion.appendChild(pcontenido);
+                            
+ 
 
 
 
+
+                            pnombreuser = document.createElement('p');
+                            pnombreuser.classList.add('nombrePerfil');
+                            pnombreuser.textContent=publicacion.nombreuser;
+                            barraContenido.insertBefore(pnombreuser,botonPerfil);
+                            
+                            divfoto_usuario = document.createElement('div');
+                            divfoto_usuario.style.backgroundColor = publicacion.foto;
+                            divfoto_usuario.classList.add('fotoPerfil');
+                            barraContenido.insertBefore(divfoto_usuario,pnombreuser);
+
+
+                             
+                    });
+                }
+            },
+            //6 - Establecemos una función que se ejecuta en caso de error
+            error:function(errorThrown){
+                console.error("ERROR:" + errorThrown.responseText);
+            }
+        }
+    );
+
+}
+
+/**
+ * Permite obtener el valor de un parámetro pasado a la página mediante GET
+ * @returns El dato del primer parámetro incluído en la URL
+ */
+ function obtenerParametroURL() {
+    let paginaURL = window.location.href;
+    let datos = paginaURL.split('?');
+    parametro = datos[1].split('=');
+    parametro = parametro[1];
+    return parametro;
+}
+
+
+>>>>>>> a622e08a093f7fe3808169c1728a8f7ea8d37dff
  
 /*Si clicamos en el botón del sol, borrarémos la clase css dark-mode del div 
 con id page y se aplicará el estilo active al sol*/
