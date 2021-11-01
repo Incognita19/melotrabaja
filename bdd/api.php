@@ -1,10 +1,12 @@
+
 <?php
 
     /* Zona de Ejecución */
     $info = new Respuesta;
     $info->estado = "";
     $info->datos= "";
-    $info = obtenerPublicaciones();
+    $info = obtenerpublicaciones();
+    
     
     /*if ($_POST) {
         if (isset($_POST['modo']) ) {
@@ -83,11 +85,21 @@
         public $mensaje;
     }
 
-    class Publicacion{
+    class publicaciones{
         public $nombreuser;
         public $titulo;
         public $hora;
+        public $foto;
         public $fijadas;
+    }
+
+    
+    class publicacion{
+        public $nombreuser;
+        public $titulo;
+        public $hora;
+        public $foto;
+        public $contenido;
     }
 
     /**
@@ -124,11 +136,47 @@
     }
     
 
-    function obtenerPublicaciones(){
+    function obtenerpublicaciones(){
         $basededatos = CrearConexion();
         $respuesta = new Respuesta;
 
-        $consulta = "SELECT nombreuser,hora,titulo,fijadas,id_publicaciones from publicacion";
+        $consulta = "SELECT nombreuser,hora,titulo,foto,fijadas,id_publicaciones from publicaciones";
+
+        $datos = $basededatos->conexion->query($consulta);
+ 
+        if ($datos->num_rows > 0) {
+            $respuesta->estado = "OK";
+            $respuesta->datos = array();
+
+            while ( $fila=$datos->fetch_assoc() ) {
+                $publicaciones = new publicaciones;
+                $publicaciones->nombreuser = $fila['nombreuser'];
+                $publicaciones->hora = $fila['hora'];
+                $publicaciones->foto = $fila['foto'];
+                $publicaciones->titulo = $fila['titulo'];
+                $publicaciones->fijadas = $fila['fijadas'];
+                $publicaciones->id_publicaciones = $fila['id_publicaciones'];
+                //$publicaciones->contenido = $fila['contenido'];
+                
+                array_push($respuesta->datos, $publicaciones);
+            }
+        }
+        else {
+            $respuesta->estado = "ERROR";
+            $respuesta->datos = "No se encontraron registros";
+        }
+
+        
+        $basededatos->conexion->close(); 
+        return $respuesta;
+    }
+
+
+    function obtenerpublicacion(){
+        $basededatos = CrearConexion();
+        $respuesta = new Respuesta;
+
+        $consulta = "SELECT nombreuser,hora,titulo,foto,contenido,id_publicaciones from publicacion";
 
         $datos = $basededatos->conexion->query($consulta);
  
@@ -140,10 +188,11 @@
                 $publicacion = new publicacion;
                 $publicacion->nombreuser = $fila['nombreuser'];
                 $publicacion->hora = $fila['hora'];
+                $publicacion->foto = $fila['foto'];
                 $publicacion->titulo = $fila['titulo'];
-                $publicacion->fijadas = $fila['fijadas'];
+                $publicacion->contenido = $fila['contenido'];
                 $publicacion->id_publicaciones = $fila['id_publicaciones'];
-                //$publicacion->contenido = $fila['contenido'];
+                //$publicaciones->contenido = $fila['contenido'];
                 
                 array_push($respuesta->datos, $publicacion);
             }
@@ -153,12 +202,10 @@
             $respuesta->datos = "No se encontraron registros";
         }
 
+        
         $basededatos->conexion->close(); 
         return $respuesta;
     }
-
-
-    
 
 
 ?>
