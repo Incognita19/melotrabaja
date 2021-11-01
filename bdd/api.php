@@ -5,11 +5,6 @@
     $info = new Respuesta;
     $info->estado = "";
     $info->datos= "";
-<<<<<<< HEAD
-    $info = obtenerpublicaciones();
-    
-=======
->>>>>>> a622e08a093f7fe3808169c1728a8f7ea8d37dff
     
     if ($_POST) {
         if (isset($_POST['modo']) ) {
