@@ -41,7 +41,7 @@ titulo varchar (24) not null,
 contenido varchar (400) not null,
 id_publicaciones varchar (8) not null unique primary key);
 
-create table Sesion(
+create table sesion(
 nombreuser varchar(12) not null unique primary key,
 fecha-inicio date not null,
 fecha-finalisación not null unique);
