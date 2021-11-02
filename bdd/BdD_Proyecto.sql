@@ -23,6 +23,14 @@ telefono int (9) not null unique,
 registrado date not null,
 email varchar (24) not null);
 
+create table tu perfil(
+    nombre varchar(12) not null,
+    apellido varchar (12) not null,
+    nombreuser varchar (12) not null,
+    registrado date not null,
+    fecha_nac date not null,
+    email varchar (24) not null);
+
 create table categoria(
 descripcion varchar (4000) not null unique,
 id_categoria Varchar (8) not null unique primary key);
