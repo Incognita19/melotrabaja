@@ -24,14 +24,6 @@ id_publicaciones varchar (8) not null unique primary key
 );
 
 
-create table usuario(
-nombreuser varchar (12) not null unique primary key,
-contraseña varchar (10) not null,
-email varchar (24) not null,
-nombre varchar (12) not  null,
-apellido varchar (12) not  null,
-);
-
 create table perfil(
 fechanac date,
 curriculum varchar (500),
@@ -41,6 +33,15 @@ genero enum('masculino','femenino','otro','unk') not null,
 telefono int (9) not null unique,
 registrado date not null,
 email varchar (40) not null);
+
+create table usuario(
+nombreuser varchar (12) not null unique primary key,
+contraseña varchar (10) not null,
+email varchar (24) not null,
+nombre varchar (12) not  null,
+apellido varchar (12) not  null,
+);
+
 
 create table categoria(
 tipo varchar (16) not null unique,

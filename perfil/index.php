@@ -110,21 +110,34 @@
                 </div>
         </div>
 
-        <div class="boton" id="boton2" onclick="ActivarBoton(this)">
-            <span>DETALLES DE LA CUENTA</span>
-        </div>
         <div class="contenido" id="contenido2"></div>
     <div class="boton" id="boton3" onclick="ActivarBoton(this)">
             <span>CONTRASEÑA Y SEGURIDAD</span>
         </div>
         <div class="contenido" id="contenido3"></div>
+
+
     <div class="boton" id="boton4" onclick="ActivarBoton(this)">
             <span>TRABAJOS</span>
         </div>
         <div class="contenido" id="contenido4">
+            <div id="contenidoTrabajos">
+
+                    <h2 id="tituloExpLaboral">Experiencia laboral</h2>
+                    <h2 id="tituloCurriculum">Curriculum</h2>
+                    <div class="cuadroExpLaboral"></div>
+                    <button id="botonCurriculum">
+                    <i id="botonMasCurriculum" class="fas fa-plus"></i>
+                    </button>
+                    <button id="botonExtras"></button>
+                        <div id="apartadoBracket">
+                            <img src="imagenes/open-bracket.png" alt="" id="bracketExtra">
+                            <p class="textoExtra">Cursos</p> 
+                            <p class="textoExtra">Diplomas</p>
+                            <p class="textoExtra">Referencias</p>
+                        </div>
+            </div>
         </div>
-
-
 
 
     </div>

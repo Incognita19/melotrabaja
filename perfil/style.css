@@ -522,7 +522,8 @@ p{
     height: 0px;
     width: 100%;
     background-color: rgba(245, 245, 245, 1);
-    overflow-y: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #contenidoPerfil{
@@ -573,6 +574,111 @@ p{
     width: 55%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cuadroExpLaboral{
+    background-color: #F8F8FF;
+    top: 15%;
+    left: 2%;
+    position: absolute;
+    height: 250px;
+    width: 55%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#tituloExpLaboral{
+    left: 22%;
+    top: 16px;
+    position: relative;
+
+}
+#botonCurriculum{
+    background-color: #F8F8FF;
+    top: 15%;
+    left: 64%;
+    position: absolute;
+    height: 150px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+#botonMasCurriculum{
+    opacity: 80%;
+    /* border-block-color: red; */
+    font-size: 13vh;
+    border: 5px;
+    color: rgba(33,150,243,255)
+    
+}
+
+
+#tituloCurriculum{
+    left: 68%;
+    top: -11px;
+    position: relative;
+
+}
+
+#botonExtras{
+    background-color: #F8F8FF;
+    top: 60%;
+    left: 67%;
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+#apartadoBracket{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    left: 77%;
+}
+#bracketExtra{
+    background-image: url(open-bracket.png);
+    background-size: 50vh;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 180px;
+}
+
+.textoExtra{
+    position: relative;
+    top: 87px;
+    left: 23%;
+    padding: 2px 5px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #robotMuestra{
