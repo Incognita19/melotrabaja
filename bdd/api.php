@@ -1,9 +1,12 @@
+
 <?php
 
     /* Zona de Ejecución */
     $info = new Respuesta;
     $info->estado = "";
     $info->datos= "";
+    
+    
     
     if ($_POST) {
         if (isset($_POST['modo']) ) {

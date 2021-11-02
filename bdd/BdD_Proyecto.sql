@@ -3,11 +3,14 @@
 DROP DATABASE IF EXISTS melotrabaja;
 CREATE DATABASE melotrabaja;
 USE melotrabaja;
+--Esta entidad contiene los atributos del perfil del usuario en la aplicación--
 
 
 create table publicaciones(
 nombreuser varchar (12) not null,
 hora date not null,
+titulo varchar (24) not null,
+id_publicaciones varchar (8) not null unique,
 foto varchar (15) not null,
 titulo varchar (30) not null,
 id_publicaciones varchar (8) not null unique primary key,
@@ -24,15 +27,23 @@ id_publicaciones varchar (8) not null unique primary key
 );
 
 
+create table usuario(
+nombreuser varchar (12) not null unique primary key,
+contraseña varchar (10) not null,
+apellido varchar(12) not null,
+nombre varchar (12) not null,
+email varchar (24) not null
+);
+
 create table perfil(
-fechanac date,
+fecha_nacimiento date,
 curriculum varchar (500),
 nombreuser varchar (12) not null unique primary key,
 foto varchar not null,
 genero enum('masculino','femenino','otro','unk') not null,
 telefono int (9) not null unique,
 registrado date not null,
-email varchar (40) not null);
+email varchar (24) not null);
 
 create table usuario(
 nombreuser varchar (12) not null unique primary key,
@@ -44,32 +55,36 @@ apellido varchar (12) not  null,
 
 
 create table categoria(
-tipo varchar (16) not null unique,
-id_categoria varchar (8) not null unique primary key);
+descripcion varchar (4000) not null unique,
+id_categoria Varchar (8) not null unique primary key);
 
+create table publicaciones(
+hora date not null,
+titulo varchar (24) not null,
+contenido varchar (400) not null,
+id_publicaciones varchar (8) not null unique primary key);
 
-create table sesion(
+create table Sesion(
 nombreuser varchar(12) not null unique primary key,
-fecha_inicio date not null,
-fecha_finalizacion not null unique);
+fecha-inicio date not null,
+fecha-finalisación not null unique);
 
-create table rel_tiene(
+create table tiene(
 id_publicación varchar (8) not null unique primary key,
 id_categorias varchar (8) not null unique);
-
 create table rel_hace(
-nombreuser varchar (12) not null unique primary key,
-contraseña (8) not null unique);
+nombre_de_ususario varchar (12) not null unique primary key,
+contraseeña (8) not null unique);
 
-create table rel_inicia(
-fecha_inicio date not null,
-fecha_finalizacion not null,
-nombreuser varchar (12) not null unique primary key);
+create table inicia(
+fecha-inicio date not null,
+fecha-finalisación not null,
+nombre de usuario varchar (12) not null unique primary key);
 
-create table rel_cuenta_c(
-id_publicaciones varchar (8) not null );
+create table cuenta_con(
+id_cat varchar (8) not null ,
+id_publicadiónes varchar (8) not null); 
 
-create table rel_especializa(
-nombreuser varchar (12) not null unique primary key,
-id_cat varchar (8) not null unique );
-
+create table especializa(
+nombre de ususario varchar (12) not null unique primary key,
+id_cat var char (8) not null unique );

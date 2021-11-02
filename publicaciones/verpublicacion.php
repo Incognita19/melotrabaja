@@ -221,7 +221,10 @@
     </div>
 <!-- /DIVS -->
 </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a622e08a093f7fe3808169c1728a8f7ea8d37dff
 <script src="eventos.js"></script>
 <script>
         let publicacion = obtenerParametroURL();

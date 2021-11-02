@@ -153,7 +153,7 @@ closeLogin.addEventListener('click', () => {
                 //4 - Indicar los datos que se incluirán. 
                 // Primero se indica el nombre del dato esperado por la página y luego el dato
                 data:{
-                    'modo': 1
+                    modo: 1
                     },
                 //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
                 success:function (datos) {
@@ -184,6 +184,8 @@ closeLogin.addEventListener('click', () => {
                                 pfecha = document.createElement('p');
                                 pfecha.classList.add('fecha');
                                 pfecha.textContent=publicacion.hora;
+
+
                                 divfoto_usuario = document.createElement('div');
                                 divfoto_usuario.style.backgroundColor = publicacion.foto;
                                 divfoto_usuario.classList.add('foto_usuario');
@@ -200,14 +202,10 @@ closeLogin.addEventListener('click', () => {
                                     divPublicacion = document.createElement('div');
                                     divPublicacion.classList.add('publicaciones', 'recientes');
                             
-                                    alink=document.createElement("a");
-                                    texto=document.createTextNode(publicacion.titulo);
-                                    alink.appendChild(texto);
-                                    alink.href="/proyecto/melotrabaja/publicaciones/verpublicacion.php?id_publicacion="+publicacion.id_publicaciones;
                                     ptitulo = document.createElement('p');
                                     ptitulo.classList.add('titulo');
-                                    ptitulo.appendChild(alink);
-
+                                    ptitulo.textContent=publicacion.titulo;
+                            
                                     pnombreuser = document.createElement('p');
                                     pnombreuser.classList.add('nombreuser');
                                     pnombreuser.textContent=publicacion.nombreuser;
@@ -239,6 +237,7 @@ closeLogin.addEventListener('click', () => {
         );
 
 }
+
 
 
 
