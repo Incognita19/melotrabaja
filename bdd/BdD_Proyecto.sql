@@ -26,7 +26,7 @@ email varchar (24) not null);
 create table tu perfil(
     nombre varchar(12) not null,
     apellido varchar (12) not null,
-    nombreuser varchar (12) not null,
+    id_perfil varchar (12) not null unique primary key,
     registrado date not null,
     fecha_nac date not null,
     email varchar (24) not null);
@@ -46,22 +46,29 @@ nombreuser varchar(12) not null unique primary key,
 fecha-inicio date not null,
 fecha-finalisación not null unique);
 
-create table tiene(
-id_publicación varchar (8) not null unique primary key,
-id_categorias varchar (8) not null unique);
-create table rel_hace(
-nombre_de_ususario varchar (12) not null unique primary key,
-contraseeña (8) not null unique);
+alter table tiene (
+add constraint FK_nombreuser,
+foreign key (usuario),
+references perfil (pk_id_perfil);
 
-create table inicia(
-fecha-inicio date not null,
-fecha-finalisación not null,
-nombre de usuario varchar (12) not null unique primary key);
+alter table rel_hace(
+ add constraint FK_nombreuser,
+ foreign key (usuario),
+ references publicaciones(pk_id_publicaciones) 
+);
 
-create table cuenta_con(
-id_cat varchar (8) not null ,
-id_publicadiónes varchar (8) not null); 
+alter table inicia(
+    add constraint FK_fecha_inicio, 
+    foreign key (usuario),
+    references sesion (pk_fecha_inicio),
+);
+alter table pose (
+    add constraint FK_id_cat
+    foreign key (categoria)
+    references publicaciones(pk_id_publicaciones)
+); 
 
-create table especializa(
-nombre de ususario varchar (12) not null unique primary key,
-id_cat var char (8) not null unique );
+alter table especializa(
+    add constraint FK_id_perfil
+    foreign key (perfil)
+    references categoria(pk_id_categorias)
