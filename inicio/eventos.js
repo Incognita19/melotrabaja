@@ -86,7 +86,19 @@ closeLogin.addEventListener('click', () => {
 });
 
 
+    function mostrarRegistro() {
+        const divDatosRegistro = document.getElementById("datosRegistro");
+        const divDatosLogin = document.getElementById("datosLogin");
+        divDatosLogin.style.display = "none";
+        divDatosRegistro.style.display = "block";
+    }
 
+    function mostrarLogin() {
+        const divDatosRegistro = document.getElementById("datosLogin");
+        const divDatosLogin = document.getElementById("datosRegistro");
+        divDatosLogin.style.display = "none";
+        divDatosRegistro.style.display = "block";
+    }
 
 
 

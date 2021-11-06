@@ -14,11 +14,9 @@
             $modo = ValidarDatos($_POST['modo']);
 
             switch ($modo) {
-                //Modo 1: Listado de todos los libros
                 case '1':
                     $info = obtenerpublicaciones();
                     break;
-                //Modo 2: Buscar libros
                 case '2':
                     $info = obtenerpublicacion();
                     break;

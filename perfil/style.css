@@ -517,6 +517,20 @@ p{
     background-color: rgba(24, 119, 242, 0.9);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* APARTADO PERFIL - PERFIL
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .contenido{
     position: relative;
     height: 0px;
@@ -575,6 +589,8 @@ p{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* APARTADO PERFIL - PERFIL
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 
 
@@ -589,6 +605,8 @@ p{
 
 
 
+/* APARTADO PERFIL - TRABAJOS
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .cuadroExpLaboral{
     background-color: #F8F8FF;
@@ -600,13 +618,35 @@ p{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+#inputExp{
+    height: 100%;
+    width: 100%;
+}
+
+.dark-mode #inputExp{
+    background-color: rgba(97, 97, 97, 0.8);
+}
+
+.dark-mode .cuadroExpLaboral{
+    background-color: rgba(97, 97, 97, 0.8);
+}
+
+.dark-mode #botonCurriculum {
+    background-color: rgba(97, 97, 97, 0.8);
+}
+
+.dark-mode #botonExtras{
+    background-color: rgba(97, 97, 97, 0.8);
+}
 #tituloExpLaboral{
     left: 22%;
     top: 16px;
     position: relative;
+    opacity: 0.8;
 
 }
 #botonCurriculum{
+    cursor: pointer;
     background-color: #F8F8FF;
     top: 15%;
     left: 64%;
@@ -628,6 +668,7 @@ p{
 
 
 #tituloCurriculum{
+    opacity: 0.8;
     left: 68%;
     top: -11px;
     position: relative;
@@ -635,6 +676,7 @@ p{
 }
 
 #botonExtras{
+    cursor: pointer;
     background-color: #F8F8FF;
     top: 60%;
     left: 67%;
@@ -646,9 +688,10 @@ p{
 }
 
 #apartadoBracket{
+    top: 200px;
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 200px;
     left: 77%;
 }
 #bracketExtra{
@@ -657,27 +700,108 @@ p{
     height: 100px;
     width: 100px;
     position: relative;
-    top: 180px;
+    top: 6px;
 }
 
 .textoExtra{
+    opacity: 0.9;
     position: relative;
-    top: 87px;
+    top: -90px;
     left: 23%;
     padding: 2px 5px;
     font-size: 20px;
 }
 
+.dark-mode .textoExtra{
+    color: black;
+}
+
+#robotTrabajo{
+    position: relative;
+    background-image: url(imagenes/RobotTrabajo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 250px;
+    left: 82%;
+    top: -28vh;
+}
+
+/* APARTADO PERFIL - TRABAJOS
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 
 
 
+#contenidoSeguridad{
+    position: relative;
+    top: 20%;
+    left: 30%;
+    height: 350px;
+    width: 350px;
+}
+    
 
 
+#botonAceptar{
+    background-color: var(--colorP);
+    position: relative;
+    left: 47%;
+    top: 2%;
+    width: 150px;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.textoSeguridad{
+    position: relative;
+    left: 25%;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.dark-mode .textoSeguridad{
+    color: black;
+}
+.dark-mode #botonAceptar {
+    background-color: rgb(53, 52, 52);
+}
+.Seguridad{
+    width: 300px;
+    height: 25px;
+    position: relative;
+    margin: 10px 30px 20px;
+    padding: 3px;
+    left: 15%;
+}
+.Seguridad:hover {
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+
+.Seguridad:focus {
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
 
 
-
-
+.dark-mode .Seguridad{
+    background-color: rgba(97, 97, 97, 0.8);
+}
+#robotSeguridad{
+    position: relative;
+    background-image: url(imagenes/RobotConfiguracion.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 400px;
+    left: 65%;
+    top: -40vh;
+}
 
 
 
