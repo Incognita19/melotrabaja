@@ -23,7 +23,7 @@ telefono int (9) not null unique,
 registrado date not null,
 email varchar (24) not null);
 
-create table tu perfil(
+create table tu_perfil(
     nombre varchar(12) not null,
     apellido varchar (12) not null,
     id varchar (12) not null unique primary key,
@@ -42,128 +42,122 @@ contenido varchar (400) not null,
 id varchar (8) not null unique primary key);
 
 create table sesion(
-nombreuser varchar(12) not null unique primary key,
+nombre varchar(12) not null,
 fecha-inicio date not null,
-fecha-finalisación not null unique);
-
+fecha-finalisación not null,
+id (8) varchar not null unique primary key;
+)
 create table tiene (
     nombreuser (12) varchar not null unique 
     id_tu_perfil (8) varchar not null unique  
 );
 create table contiene(
-    id_tu_perfil (8) varchar not null unique 
+    id_tu_perfil (8) varchar not null unique, 
+    id_trabajo(8) varchar not null unique
 
 
 );
+
 create table especializa(
-    id_trabajo (8) varchar not null unique 
+    id_trabajo (8) varchar not null unique ,
     id_categoria (8) varchar not null unique 
 );
 create table pose(
-    id_categoria (8) varchar not null unique 
+    id_categoria (8) varchar not null unique, 
     id_publicaciónes (8) varchar not null unique 
 );
 create table hace(
-    nombreuser(12) varchar not null unique 
+    nombreuser(12) varchar not null unique,
     id_publicaciónes (8) varchar not null unique
 
 
 );
 create table inicia(
-    nombreuser(12) varchar not null unique 
+    nombreuser(12) varchar not null unique,
     id_sesion(8) varchar not null unique
 
 );
 
-alter table tiene (
+alter table tiene
 add constraint FK_nombreuser,
-foreign key (),
-references 
-on update
-on delete);
+foreign key (nombreuser),
+references usuario(nombreuser),
+on update cascade,
+on delete cascade;
 
-alter table rel_hace(
- add constraint FK_nombreuser,
- foreign key (),
- references
-on update 
-on delete
-);
+alter table tiene
+ add constraint FK_id_tu_perfil,
+ foreign key (id_tu_perfil),
+ references tu_perfil(id),
+on update cascade,
+on delete cascade;
 
-alter table inicia(
-    add constraint FK_fecha_inicio, 
-    foreign key (usuario),
-    references,
-    on update
-    on delete
-);
-alter table posé (
-    add constraint FK_id_cat
-    foreign key (categoria)
-    references 
-    on update
-    on delete
-); 
+alter table hace
+    add constraint FK_nombreuser, 
+    foreign key (nombreuser),
+    references usuario(nombreuser),
+    on update cascade,
+    on delete cascade;
+    
+alter table hace
+    add constraint FK_id_publicaciones,
+    foreign key (id_publicaciones),
+    references publicaciones(id),
+    on update cascade,
+    on delete cascade; 
 
-alter table especializa(
-    add constraint FK_id_perfil
-    foreign key (perfil)
-    references 
-    on update
-    on delete);
+alter table inicia
+    add constraint FK_nombreuser,
+    foreign key (nombreuser),
+    references usuario(nombreusuario),
+    on update cascade,
+    on delete cascade;
 
-alter table(
-    add constraint
-    foreign key
-    references
-    on update
-    on delete
-);
+alter table inicia
+    add constraint FK_id_sesion,
+    foreign key (id_sesion),
+    references sesion (id),
+    on update cascade,
+    on delete cascade;
 
-alter table(
-    add constraint
-    foreign key
-    references
-    on update
-    on delete
-);
+alter table pose 
+    add constraint FK_id_publicaciones,
+    foreign key (id_publicaciones)
+    references publicaciones(id)
+    on update cascade
+    on delete cascade;
 
-alter table(
-    add constraint
-    foreign key
-    references
-    on update
-    on delete
-);
+alter table pose
+    add constraint FK_id_categoria
+    foreign key (id_categoria)
+    references categoria(id)
+    on update cascade
+    on delete cascade;
 
-alter table(
-    add constraint
-    foreign key
-    references
-    on update
-    on delete
-);
+alter table especializa
+    add constraint FK_id_categoria
+    foreign key (id_categoria)
+    references categoria(id)
+    on update cascade
+    on delete cascade;
 
-alter table(
-    add constraint
-    foreign key
-    references
-    on update
-    on delete
-);
+alter table especializa
+    add constraint FK_id_trabajo
+    foreign key (id_trabajo)
+    references trabajo(id)
+    on update cascade
+    on delete cascade;
 
-alter table(
-    add constraint
-    foreign key
-    references
-    on update
-    on delete
-);
+alter table contiene
+    add constraint FK_id_tu_perfil
+    foreign key (id_tu_perfil)
+    references tu_perfil(id)
+    on update cascade
+    on delete cascade;
 
-alter table(
-    add constraint
-    foreign key
-    references
-    on update
-    on delete
-);
+alter table contiene
+    add constraint FK_id_trabajo
+    foreign key (id_trabajo)
+    references trabajo(id)
+    on update cascade
+    on delete cascade;
