@@ -448,7 +448,6 @@ p{
 
 .fotoPerfil{
         top: 5%;
-        background-image: url(imagenes/iconPerfil.jpg);
         background-size: 100%;
         background-repeat: no-repeat;
         position: relative;
@@ -464,6 +463,9 @@ p{
     text-shadow: 0 0 2px #fff;
 }
 
+.dark-mode .nombrePerfil{
+    color: rgb(255, 255, 255);;
+}
 #botonPerfil{
     background-color: rgba(245, 245, 245, 0.80);
     text-shadow: 0 0 2px rgb(0, 0, 0);

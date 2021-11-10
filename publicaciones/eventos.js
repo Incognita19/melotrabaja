@@ -142,8 +142,6 @@ const divPublicacion = document.getElementById("publicacion");
 const barraContenido = document.getElementById("barraContenido");
 const botonPerfil = document.getElementById("botonPerfil");
 
-<<<<<<< HEAD
-=======
 function cargarPublicacion(publicacion) {
         
     $.ajax(
@@ -230,7 +228,6 @@ function cargarPublicacion(publicacion) {
 }
 
 
->>>>>>> a622e08a093f7fe3808169c1728a8f7ea8d37dff
  
 /*Si clicamos en el botón del sol, borrarémos la clase css dark-mode del div 
 con id page y se aplicará el estilo active al sol*/

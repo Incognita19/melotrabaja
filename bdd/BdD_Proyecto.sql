@@ -6,12 +6,34 @@ USE melotrabaja;
 --Esta entidad contiene los atributos del perfil del usuario en la aplicación--
 
 
+create table publicaciones(
+nombreuser varchar (12) not null,
+hora date not null,
+titulo varchar (24) not null,
+id_publicaciones varchar (8) not null unique,
+foto varchar (15) not null,
+titulo varchar (30) not null,
+id_publicaciones varchar (8) not null unique primary key,
+fijadas enum("si" , "no") not null default "no"
+);
+
+create table publicacion(
+nombreuser varchar (12) not null,
+hora date not null,
+foto varchar (15) not null,
+titulo varchar (30) not null,
+contenido varchar (5000) not null,
+id_publicaciones varchar (8) not null unique primary key
+);
+
+
 create table usuario(
 nombreuser varchar (12) not null unique primary key,
-contraseña varchar (10) not null),
-apellido varchar(12) not null),
-nombre varchar (12) not null),
-email varchar (24) not null);
+contraseña varchar (10) not null,
+apellido varchar(12) not null,
+nombre varchar (12) not null,
+email varchar (24) not null
+);
 
 create table perfil(
 fecha_nacimiento date,
@@ -22,6 +44,15 @@ genero enum('masculino','femenino','otro','unk') not null,
 telefono int (9) not null unique,
 registrado date not null,
 email varchar (24) not null);
+
+create table usuario(
+nombreuser varchar (12) not null unique primary key,
+contraseña varchar (10) not null,
+email varchar (24) not null,
+nombre varchar (12) not  null,
+apellido varchar (12) not  null,
+);
+
 
 create table categoria(
 descripcion varchar (4000) not null unique,

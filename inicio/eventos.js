@@ -86,7 +86,19 @@ closeLogin.addEventListener('click', () => {
 });
 
 
+    function mostrarRegistro() {
+        const divDatosRegistro = document.getElementById("datosRegistro");
+        const divDatosLogin = document.getElementById("datosLogin");
+        divDatosLogin.style.display = "none";
+        divDatosRegistro.style.display = "block";
+    }
 
+    function mostrarLogin() {
+        const divDatosRegistro = document.getElementById("datosLogin");
+        const divDatosLogin = document.getElementById("datosRegistro");
+        divDatosLogin.style.display = "none";
+        divDatosRegistro.style.display = "block";
+    }
 
 
 
@@ -153,6 +165,7 @@ closeLogin.addEventListener('click', () => {
                 //4 - Indicar los datos que se incluirán. 
                 // Primero se indica el nombre del dato esperado por la página y luego el dato
                 data:{
+                    modo: 1
                     },
                 //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
                 success:function (datos) {
@@ -183,8 +196,10 @@ closeLogin.addEventListener('click', () => {
                                 pfecha = document.createElement('p');
                                 pfecha.classList.add('fecha');
                                 pfecha.textContent=publicacion.hora;
+
+
                                 divfoto_usuario = document.createElement('div');
-                                divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
+                                divfoto_usuario.style.backgroundColor = publicacion.foto;
                                 divfoto_usuario.classList.add('foto_usuario');
                               
                                 divPublicacion.appendChild(ptitulo);
@@ -213,7 +228,7 @@ closeLogin.addEventListener('click', () => {
                         
                                     divfoto_usuario = document.createElement('div');
                                     divfoto_usuario.classList.add('foto_usuario');
-                                    divfoto_usuario.style.backgroundColor = publicacion.foto_usuario;
+                                    divfoto_usuario.style.backgroundColor = publicacion.foto;
                         
                                     divPublicacion.appendChild(ptitulo);
                                     divPublicacion.appendChild(pnombreuser);

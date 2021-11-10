@@ -34,6 +34,21 @@ ul {
 
 #closeLogin{
     position: absolute;
+    background-color: rgb(199, 1, 1);
+    text-size-adjust: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    left: 69%;
+    top: 29%;
+}
+
+#aceptarLogin{
+    position: absolute;
     background-color: var(--colorP);
     text-size-adjust: 10px;
     border: 0;
@@ -43,7 +58,7 @@ ul {
     font-size: 14px;
     padding: 5px 10px;
     cursor: pointer;
-    left: 36%;
+    left: 35%;
 }
 
 #openLogin{
@@ -108,9 +123,14 @@ ul {
 }
 
 .cuentaReg{
+    cursor: pointer;
     top: 61%;
 }
 
+.cuentaReg:hover {
+    color: var(--colorP);
+    text-shadow: 0 0 2px white;
+}
 .login h1 {
     position: relative;
     margin: 0;
@@ -124,6 +144,35 @@ ul {
     font-size: 14px;
 }
 
+#datosRegistro{
+    display: none;
+}
+
+.volverAtras{
+    position: relative;
+    font-size: 40px;
+    color: rgb(199, 1, 1);
+    top: 55px;
+    left: -30px;
+    cursor: pointer;
+}
+
+.volverAtras:hover {
+    text-shadow: 0 0 2px var(--colorP);
+}
+#aceptarRegistro{
+    position: absolute;
+    background-color: var(--colorP);
+    text-size-adjust: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    left: 35%;
+}
 
 .publicaciones:hover{
     box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
@@ -132,7 +181,7 @@ ul {
     box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
 }
 #closeLogin:hover{
-    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+    box-shadow: 0 3px 3px 3px rgba(255, 0, 0, 0.2);
 }
 #openLogin:hover{
     box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);

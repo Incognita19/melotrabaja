@@ -1,13 +1,3 @@
-<!-- 
-select Campos , Campos, Campos
-from A INNER JOIN B 
-where 
-A.DOC = B.A_ID
-AND
-libro.ISBN = escribe.libro_ISBN
-AND 
-autor.nacionalidad = 'Estonia'; 
--->
 
 
 
@@ -25,8 +15,6 @@ autor.nacionalidad = 'Estonia';
 <body>
 <div id="page">
 
-        <!-- DIVS -->
-        <!-- DIV ENCABEZADO-->
         <div class="fila" id="encabezado">
     <div id="meloTrabaja">
         <div id="logo"></div>
@@ -57,9 +45,6 @@ autor.nacionalidad = 'Estonia';
     </div>
 
 
-        <!-- DIV BARRA-->
-
-
 
         <div class="fila" id="barra">
             <div class="toggle-btn" id="iconoMenu">    
@@ -81,8 +66,6 @@ autor.nacionalidad = 'Estonia';
         </div>
 
 
-
-        <!-- DIV CONTENIDO -->
         <div class="fila" id="contenido">
             
             <div id="bordeContenido">
@@ -241,29 +224,43 @@ autor.nacionalidad = 'Estonia';
                         <p>asdasd</p>
                         </li>
                     </a>
-                </ul>   
+                </ul>
+     
             </div>
-            <div class="login" class="mostrarlogin" id="login">
+            
+            <div class="login mostrarlogin" id="login">
                 <div id="login1">
-                    <h1>Login</h1><br>
-                    <p>Nombre de usuario</p><br>
-                    <input type="User" name="Nombre de usuario" id="Username"><br>
-                    <p>Contraseña</p><br>
-                    <input type="Contra" name="Contraseña" id="Password"><br>
-                <!-- FORMULARIOS LOGIN -->
-                    <button id="closeLogin">Cerrar</button>
-                    <p class="cuentaReg" >¿Aún no tienes una cuenta?</p>
-                    <img src="imagenes/robotLogin.png" alt="Logo" class="robotLogin" >
+                    <div id="datosLogin">
+                        <h1>Login</h1><br>
+                        <p>Nombre de usuario</p><br>
+                        <input type="User" name="Nombre de usuario" id="Username"><br>
+                        <p>Contraseña</p><br>
+                        <input type="Contra" name="Contraseña" id="Password"><br>
+                        <button id="closeLogin">X</button>
+                        <button id="aceptarLogin">Aceptar</button>
+                        <p class="cuentaReg" onclick="mostrarRegistro()">¿Aún no tienes una cuenta?</p>
                     </div>
+                    <div id="datosRegistro">
+                        <h1>Registro</h1>
+                        <p>Nombre de usuario</p><br>
+                        <input type="User" name="Nombre de usuario" id="registroUsername"><br>
+                        <p>Contraseña</p><br>
+                        <input type="Contra" name="Contraseña" id="registroPassword"><br>
+                        <p>Confirmar contraseña</p><br>
+                        <input type="Contra" name="Contraseña" id="registroPassword"><br>
+                        <button id="aceptarRegistro">Aceptar</button>
+                        <i class="fas fa-arrow-circle-left volverAtras" onclick="mostrarLogin()"></i>
+                    </div>
+                    <img src="imagenes/robotLogin.png" alt="Logo" class="robotLogin" >   
                 </div>
-               
             </div>
+        </div>
+
 
 
         <div class="fila" id="pie">
 
             </div>
-        <!-- /DIVS -->
 
 
 

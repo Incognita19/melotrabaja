@@ -196,7 +196,7 @@
         <li>
             <img src="imagenes/logo.png" alt="Logo" class="logo">
         </li>
-        <a href="http://">
+        <a href="../perfil">
             <li class="boton">
             <p>PERFIL</p>
             </li>
