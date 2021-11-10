@@ -13,29 +13,25 @@ apellido varchar(12) not null),
 nombre varchar (12) not null),
 email varchar (24) not null);
 
-create table perfil(
+create table tu_perfil(
 fecha_nacimiento date,
-curriculum varchar (500),
 id varchar (12) not null unique primary key,
 foto varchar not null,
-genero enum('masculino','femenino','otro','unk') not null,
+genero enum ('masculino','femenino','otro','unk') not null,
 telefono int (9) not null unique,
-registrado date not null,
+administrador date not null,
 email varchar (24) not null);
 
-create table tu_perfil(
-    nombre varchar(12) not null,
-    apellido varchar (12) not null,
-    id varchar (12) not null unique primary key,
-    registrado date not null,
-    fecha_nac date not null,
-    email varchar (24) not null);
+create table trabajo (
+    curriculum varchar (500) not null,
+    descripción_profesional varchar (4000) not null,
+    id varchar (12) not null unique primary key);
 
 create table categoria(
 descripcion varchar (4000) not null unique,
 id Varchar (8) not null unique primary key);
 
-create table publicaciones(
+create table publicación(
 hora date not null,
 titulo varchar (24) not null,
 contenido varchar (400) not null,
