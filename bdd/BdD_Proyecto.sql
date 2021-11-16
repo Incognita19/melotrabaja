@@ -8,10 +8,11 @@ USE melotrabaja;
 
 create table usuario(
 nombreuser varchar (12) not null unique primary key,
-contraseña varchar (10) not null),
-apellido varchar(12) not null),
-nombre varchar (12) not null),
-email varchar (24) not null);
+contraseña varchar (10) not null,
+apellido varchar(12) not null,
+nombre varchar (12) not null,
+email varchar (24) not null
+);
 
 create table tu_perfil(
 fecha_nacimiento date,
@@ -29,7 +30,7 @@ create table trabajo (
 
 create table categoria(
 descripcion varchar (4000) not null unique,
-id Varchar (8) not null unique primary key);
+id varchar (8) not null unique primary key);
 
 create table publicación(
 hora date not null,
@@ -41,15 +42,15 @@ create table sesion(
 nombre varchar(12) not null,
 fecha-inicio date not null,
 fecha-finalisación not null,
-id (8) varchar not null unique primary key;
-)
+id (8) varchar not null unique primary key);
+
 create table tiene (
     nombreuser (12) varchar not null unique 
     id_tu_perfil (8) varchar not null unique  
 );
 create table contiene(
-    id_tu_perfil (8) varchar not null unique, 
-    id_trabajo(8) varchar not null unique
+    id_tu_perfil varchar(8) not null unique, 
+    id_trabajo varchar(8) not null unique
 
 
 );
