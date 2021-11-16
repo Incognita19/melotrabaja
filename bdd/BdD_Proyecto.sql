@@ -3,7 +3,7 @@
 DROP DATABASE IF EXISTS melotrabaja;
 CREATE DATABASE melotrabaja;
 USE melotrabaja;
---Esta entidad contiene los atributos del perfil del usuario en la aplicación--
+/*Esta entidad contiene los atributos del perfil del usuario en la aplicación--*/
 
 
 create table usuario(
