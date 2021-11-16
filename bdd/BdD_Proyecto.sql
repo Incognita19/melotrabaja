@@ -42,7 +42,7 @@ create table sesion(
 nombre varchar(12) not null,
 fecha-inicio date not null,
 fecha-finalisación not null,
-id (8) varchar not null unique primary key);
+id varchar (8) not null unique primary key);
 
 create table tiene (
     nombreuser (12) varchar not null unique 
@@ -56,22 +56,22 @@ create table contiene(
 );
 
 create table especializa(
-    id_trabajo (8) varchar not null unique ,
-    id_categoria (8) varchar not null unique 
+    id_trabajo varchar(8) not null unique ,
+    id_categoria varchar(8)  not null unique 
 );
 create table pose(
-    id_categoria (8) varchar not null unique, 
-    id_publicaciónes (8) varchar not null unique 
+    id_categoria varchar(8) not null unique, 
+    id_publicaciónes varchar(8)  not null unique 
 );
 create table hace(
-    nombreuser(12) varchar not null unique,
-    id_publicaciónes (8) varchar not null unique
+    nombreuser varchar(12) not null unique,
+    id_publicaciónes varchar (8)  not null unique
 
 
 );
 create table inicia(
-    nombreuser(12) varchar not null unique,
-    id_sesion(8) varchar not null unique
+    nombreuser varchar(12)  not null unique,
+    id_sesion varchar(8) not null unique
 
 );
 
