@@ -446,6 +446,14 @@ p{
     overflow: hidden;
 }
 
+.logoBarra {
+    background-color: var(--colorP);
+    border-radius: 50%;
+    border-color: 5px solid white;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
 .fotoPerfil{
         top: 5%;
         background-size: 100%;

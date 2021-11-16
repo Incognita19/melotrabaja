@@ -68,19 +68,8 @@
         <div class="fila" id="contenido">
             
             <div id="bordeContenido">
-                <div id="contenidoTop" class="separacionContenido">
-                    <h3>PUBLICACIONES FIJADAS</h3>
-
-
-
-                    </div>
-                <div id="contenidoBot" class="separacionContenido">
-                    <h3>PUBLICACIONES RECIENTES</h3>
-
-
-                    
-
-                </div>
+            <div id="robotStop"></div>
+                <p id="textoStop"><b>ALTO!</b><br>a donde vas?<br>estas en un lugar erróneo, sal de aquí</p>
 
             </div>
             <div id="contenedorFondo">

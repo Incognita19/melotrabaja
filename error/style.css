@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-
 #page{
     height: 100%;
-
 }
 ul {
     padding: 0;
@@ -18,38 +14,41 @@ ul {
     display: inline;
   } */
   
-  a {
-    outline: none;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    margin-right: 0.625%;
-    text-align: center;
-    /* line-height: 3; */
-    color: black;
+  a {outline: none; text-decoration: none; display: inline-block; width: 100%; margin-right: 0.625%; text-align: center; color: black;
   }
   
-  li:last-child a {
-    margin-right: 0;
+  li:last-child a { margin-right: 0;
   }
   
   a:link, a:visited, a:focus {
-    background: white;
   }
   
-  a:hover {
-    background: var(--colorP);
+  a:hover { background: rgba(65, 255, 245, 0.1);
   }
   
-  a:active {
-    background: darkturquoise;
-    color: white;
+  a:active { background: darkturquoise; color: white;
   }
 
 /* ABRIR LOGIN
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 #closeLogin{
+    position: absolute;
+    background-color: rgb(199, 1, 1);
+    text-size-adjust: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    left: 69%;
+    top: 29%;
+}
+
+#aceptarLogin{
+    position: absolute;
     background-color: var(--colorP);
     text-size-adjust: 10px;
     border: 0;
@@ -59,7 +58,7 @@ ul {
     font-size: 14px;
     padding: 5px 10px;
     cursor: pointer;
-    top: 90%;
+    left: 35%;
 }
 
 #openLogin{
@@ -86,25 +85,22 @@ ul {
     pointer-events: none;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     transition: 200ms linear;
 }
 
 .mostrar{
     pointer-events: auto;
-    opacity: 1;
+    opacity: 1 !important;
 
 }
 
-.mostrarlogin{
+.ocultarlogin{
     pointer-events: auto;
     opacity: 0;
 }
 .login{
-
-
-
     background-color: white;
     width: 600px;
     height: 300px;
@@ -112,20 +108,95 @@ ul {
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-
-    
+    opacity: 0;
 }
 
+
+.robotLogin{
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    border-color: 5px solid white;
+    display: block;
+    height: 300px;
+    width: 300px;
+}
+
+.cuentaReg{
+    cursor: pointer;
+    top: 61%;
+}
+
+.cuentaReg:hover {
+    color: var(--colorP);
+    text-shadow: 0 0 2px white;
+}
 .login h1 {
+    position: relative;
     margin: 0;
+    left: 10%;
 }
 
 .login p {
+    left: 32%;
+    position: absolute;
     opacity: 0.7;
     font-size: 14px;
 }
 
+#datosRegistro{
+    display: none;
+}
+
+.volverAtras{
+    position: relative;
+    font-size: 40px;
+    color: rgb(199, 1, 1);
+    top: 55px;
+    left: -30px;
+    cursor: pointer;
+}
+
+.volverAtras:hover {
+    text-shadow: 0 0 2px var(--colorP);
+}
+#aceptarRegistro{
+    position: absolute;
+    background-color: var(--colorP);
+    text-size-adjust: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    left: 35%;
+}
+
+.publicaciones:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.1);
+}
+.toggle-btn:hover {
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+#closeLogin:hover{
+    box-shadow: 0 3px 3px 3px rgba(255, 0, 0, 0.2);
+}
+#openLogin:hover{
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+.login input:hover {
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+
+.login input:focus {
+    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
+}
+.login input {
+    
+    margin: 2%;
+}
 /* CERRAR LOGIN
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
@@ -176,8 +247,8 @@ ul {
     background-size: contain; 
 } 
 
-.logo {
-    background-color: var(--colorP);;
+.logoBarra {
+    background-color: var(--colorP);
     border-radius: 50%;
     border-color: 5px solid white;
     display: block;
@@ -185,6 +256,10 @@ ul {
     width: 50px;
   }
 
+.imgBarra{
+    width: 30px;
+    height: 30px;
+}
 .btn-barra{
     background-color: white;
     text-size-adjust: 10px;
@@ -205,7 +280,6 @@ ul {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-size: 14px;
     cursor: pointer;
-    padding: 15px ;
 }
 /* CERRAR BARRA-LATERAL
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -221,10 +295,9 @@ html,body{
     width: 100%;
     height: 100%;
 }
-h1,h3,h4{
+h1,h3{
     margin-top: 0px; 
     margin-right: 0px;
-    font-weight: bolder;
 }
 p{
     margin-top: 0px; 
@@ -237,6 +310,58 @@ p{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 769px) {
 
 /* ABRIR ENCABEZADO
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -293,6 +418,8 @@ p{
     border:1px solid white;
     color:white;
 }
+
+.dark-mode p{color: white;}
 .dark-mode #encabezado{background-color: rgb(2, 36, 80);
 }
 .dark-mode #barra{background-color: rgb(78, 78, 78);
@@ -303,7 +430,7 @@ p{
 }
 .dark-mode .buscar input{  background-color: rgb(53, 52, 52);
 }
-.dark-mode #barraContenido{  background:  rgba(2, 36, 80, 0.8);
+.dark-mode #barraContenido{  background:  rgba(255, 255, 255, 0.5);
 }
 .dark-mode #BarraLateral{  background:  rgb(78, 78, 78);
 }
@@ -321,10 +448,27 @@ p{
 }
 .dark-mode .nombrePerfil{color: black;
 }
-
-
-
-
+.dark-mode .contenido{background-color: rgba(255, 255, 255, 0.5);
+}
+.dark-mode .cuadroDescPerfil{background-color: rgba(97, 97, 97, 0.8);
+}
+.dark-mode #contenidoTop{border-bottom: 3px solid rgba(0, 0, 0, 0.2);;
+}
+.dark-mode #openLogin{background-color: rgb(53, 52, 52);
+}
+.dark-mode #closeLogin{background-color: rgb(53, 52, 52);
+}
+.dark-mode .login{
+    background-color: rgba(0,0,0,0.70);
+}
+.dark-mode .login h1{color: white;
+}
+.dark-mode #bordeContenido a:link{
+    background-color: transparent;
+}
+.dark-mode .publicaciones{
+   background-color: rgba(105, 105, 105, 0.3);
+}
 #logo{
     float: left;
     height: 100%;
@@ -335,7 +479,6 @@ p{
     background-position: 20%;
 
 }
-
 #meloTrabaja{
     position: relative;
     height: 100%;
@@ -349,6 +492,7 @@ p{
 }
 
 #meloTrabaja h1{
+    font-weight: bolder;
     padding-top: 4px;
     display: inline-block;
     left: 0px;
@@ -372,14 +516,6 @@ p{
     box-shadow: 0px 1px 5px #999;
 }
 
-.logoBarra {
-    background-color: var(--colorP);
-    border-radius: 50%;
-    border-color: 5px solid white;
-    display: block;
-    height: 50px;
-    width: 50px;
-  }
 
 /* CERRAR BARRA
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -390,15 +526,13 @@ p{
                                     
 /* ABRIR CONTENIDO
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/                                    
-#contenidoGen{
+#contenido{
+
     overflow: hidden;
     height: 83%;
-    /* border-bottom: 2px solid gray; */
-    /* background-color: #f7f7f7; */
     box-shadow: 0px -1px 5px #999;
     /* background-image: url("imagenes/fondo1.png"); */
 }
-
 
 #bordeContenido {
     z-index: 1;
@@ -408,182 +542,44 @@ p{
     height: 90%;
     top: 5%;
     border: 2px solid rgba(0,0,0,0.1); 
-    /* background-color: white; */
     background-color: rgba(250, 250, 250, 0.5);
+    /* background-image: url("imagenes/1pxblanco090.png"); */
     box-shadow: 0px 2px 5px #f7f7f7;
+    
 }
 
-.tituloPublicacion{
-    text-align: center;
-    top: 5%;
-    color: #000000;
-    font-size: 30px;
+#robotStop{
+    left: 55%;
     position: relative;
-    border: 1px solid #ccc;
+    background-image: url(imagenes/RobotStop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 70vh;
+    top: 3%;
 }
 
-.textoPublicacion{
-    text-align: justify;
-    top: 5%;
-    color: rgba(0,0,0,0.90);
-    font-size: 20px;
-    position: relative;
-    margin: 1px 5%;
-}
-.fechaPublicacion{
-    position: relative;
-    left: 5%;
-    color: rgba(0,0,0,0.50);
-    font-size: 15px;
-}
-
-#publicacion{
-    height: 100%;
-    float: right;
-    position: relative;
-    width: 90%;
-    overflow: hidden;
-}
-#barraContenido {
-    position: absolute;
-    height: 100%;
-    width: 10%;
-    background-color: rgba(24, 119, 242, 0.5);
-    overflow: hidden;
-}
-
-#titulo{
+#textoStop{
+    margin: 8px 6px;
+    font-weight: bold;
+    color: red;
     font-size: 40px;
-    position: relative;
+    position: absolute;
+    left: 31%;
+    top: 30%;
+    left: 11%;
+    /* justify-content: center; */
     text-align: center;
-    top: 5%;
-}
-#tituloPubli{
-    position: relative;
-    top: 10%;
-    left: 5%;
-    height: 40px;
-    width: 90%;
-    font-size: 30px;
-    color: #202020;
-    border: 1px solid #ccc;
+    text-shadow: 0 0 3px var(--colorP);
 }
 
-.dark-mode #tituloPubli{
-    background-color: rgba(0, 0, 0, 0);
-}
-#textArea{
-    position: relative;
-    top: 20%;
-    left: 5%;
-    height: 40vh;
-    width: 90%;
-}
 
-.ql-toolbar.ql-snow {
-    position: relative;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    padding: 8px;
-    top: 20%;
-    left: 5%;
-    width: 90%;
-}
-.fotoPerfil{
-        top: 5%;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        position: relative;
-        height: 150px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-#categoria{
-    position: relative;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    top: 20%;
-    font-size: 20px;
-    text-shadow: 0 0 2px #fff;
-}
-
-#formcateg{
-    position: relative;
-    top: 22%;
-    left: 20%;
-}
-
-#categform{
-    text-shadow: 0 0 2px rgb(0, 0, 0);
-    background-color: rgba(245, 245, 245, 0.80);
-    position: relative;
-    float: left;
-    left: -7%;
-    top: 20%;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-#Publicar{
-    background-color: var(--colorP);
-    position: relative;
-    left: -13%;
-    top: 50px;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color: #ffff;
-    font-size: 30px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.dark-mode .nombrePerfil{
-    color: rgb(255, 255, 255);;
-}
-#botonPerfil{
-    background-color: rgba(245, 245, 245, 0.80);
-    text-shadow: 0 0 2px rgb(0, 0, 0);
-    position: relative;
-    float: left;
-    left: 30%;
-    top: 12%;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-#botonPerfil:hover{
-    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
-}
-#botonMD{
-    text-shadow: 0 0 2px rgb(0, 0, 0);
-    background-color: rgba(245, 245, 245, 0.80);
-    position: relative;
-    float: left;
-    left: -10%;
-    top: 20%;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-#botonMD:hover{
-    box-shadow: 0 3px 3px 3px rgba(65, 255, 245, 0.2);
-}
 .separacionContenido{
     position: relative;
     width: 100%;
     height: 50%;
     /*border-bottom: 1px solid black;*/
-    
+    overflow-y: scroll;
 }
 
 #contenidoTop{
@@ -598,17 +594,30 @@ p{
     border: 0.5px solid rgba(0,0,0,0.30);
     box-shadow: 0px 0.2px 5px #999;
 }
+
+
+.publicaciones h1,h2,h3{
+    background-color: rgba(139, 139, 139, 0.1);
+    color: black;
+    font-size: 15px!important;
+    font-weight: 1!important;
+    font-family: 'Acme', sans-serif;
+}
+
+.publicaciones p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .titulo{
-    font-weight: 400px;
+    font-size: 50px;
     position: relative;
     float: left;
-    left: 45px;
+    left: 50px;
     color: black;
     font-size: 90%;
 }
 .nombreuser{
     position: absolute;
-    left: 45px;
+    left: 50px;
     top: 19px;
     color: #A9A9A9;
     font-size: 80%;
@@ -621,9 +630,15 @@ p{
     color: #A9A9A9;
     font-size: 80%;
 }
-.destacadas{
+
+.foto_usuario{
+    width: 44px;
+    height: 44px;
+    border-radius: 40px;
+    border: 1px solid black;
+}
+.fijadas{
     position: relative;
-    background-image: url("imagenes/adminicon.png");
     background-size: contain;
     background-repeat: no-repeat;
     float: left;
@@ -631,7 +646,6 @@ p{
 
 .recientes{
     position: relative;
-    background-image: url("imagenes/usuarioicon.png");
     background-size: contain;
     background-repeat: no-repeat;
     float: left;
@@ -652,135 +666,10 @@ p{
 
 
 
-
-
-
-#contenedor{
-    position: relative;
-    left: 15%;
-    top: 10%;
-    width: 70%;
-    height: 80%;
-    background-color: white;
-}
-
-.boton span{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    font-size: 3vh;
-}
-
-.boton:hover{
-    background-color: rgba(24, 119, 242, 0.1);
-    color: black;
-}
-
-
-.boton:active{
-    background-color: rgba(24, 119, 242, 0.9);
-}
-
-.contenido{
-    position: relative;
-    height: 0px;
-    width: 100%;
-    background-color: rgba(245, 245, 245, 1);
-    overflow-y: scroll;
-}
-
-#contenidoPerfil{
-    width: 100%;
-}
-.cuadroImgPerfil{
-    left: 1%;
-    top: 5%;
-    background-image: url(imagenes/iconPerfil.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    float: left;
-    position: absolute;
-    height: 250px;
-    width: 250px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    
-}
-
-#textosPerfil{
-    color: rgba(0, 0, 0, 0.9);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: relative;
-}
-#textosPerfil table{
-    position: relative;
-    top: 25px;
-    left: 19%;
-}
-
-#textosPerfil table td{
-    padding: 10px 5px 9px;
-}
-
-.nomDatoPerfil{
-    color: black;
-}
-
-.datoPerfil{
-    color: rgba(0, 0, 0, 0.7);
-}
-.cuadroDescPerfil{
-    background-color: #F8F8FF;
-    top: 5%;
-    left: 40%;
-    position: absolute;
-    height: 250px;
-    width: 55%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-
-#robotMuestra{
-    top: 35%;
-    left: 30%;
-    width: 400px;
-    height: 400px;
-    position: absolute;
-}
-
-#textoRobot{
-    top: 15%;
-    left: 56%;
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    font-family: 'Yaldevi', sans-serif;
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-#infoRobot{
-    top: auto;
-    bottom: 0px;
-    position: fixed;
-    width: 100%;
-    height: 50%;
-    transition: opacity 500ms;
-    overflow: hidden;
-    background-image: url("imagenes/RobotMuestra.png");
-    background-size: 400px 400px;
-    background-repeat: no-repeat;
-    background-position: center top;
 }
 
 
 
-
-
-
-
-
-/* Barra de buscar
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .buscar{
     top: -12%;
@@ -838,33 +727,17 @@ p{
 
 
 
-/* Barra de buscar
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Animacion del encabezado 
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
+body{
+    font-family: 'Exo', sans-serif;
+}
 
 
 .context {
@@ -1007,8 +880,15 @@ p{
 
 
 
-/* Animacion del encabezado 
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1079,5 +959,3 @@ p{
       opacity: 0.15;
    }
       }
-
-

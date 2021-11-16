@@ -154,6 +154,14 @@ ul {
     border-bottom: 1px solid white;
     text-align: center;
 }
+.logoBarra {
+    background-color: var(--colorP);
+    border-radius: 50%;
+    border-color: 5px solid white;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
 
 #BarraLateral .btn-cerrar{
     color: black;

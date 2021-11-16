@@ -52,6 +52,7 @@
             <button  id="openLogin">
                     Acceder
             </button>
+
             <div class="buscar"></buscar>
 
 
@@ -209,26 +210,18 @@
                     </li>
                     <a href="../perfil">
                         <li class="boton">
-                        <i class="far fa-id-badge" ></i>
+                        <img src="imagenes/perfil-personal.png" alt="LogoPerfil" class="imgBarra">
                         <p>PERFIL</p>
                         </li>
                     </a>
-                    <a href="../error">
+                    <a href="http://">
                         <li class="boton">
-                        <i class="far fa-bell" ></i>
-                        <p>Notificaciones</p>
+                        <p>asdasd</p>
                         </li>
                     </a>
-                    <a href="../error">
+                    <a href="http://">
                         <li class="boton">
-                        <i class="fas fa-envelope-open-text"></i>
-                        <p>Mensajes</p>
-                        </li>
-                    </a>
-                    <a href="../crearPublicacion">
-                        <li class="boton">
-                        <i class="fas fa-edit"></i>
-                        <p>Crear Publicacion</p>
+                        <p>asdasd</p>
                         </li>
                     </a>
                 </ul>

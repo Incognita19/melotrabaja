@@ -20,6 +20,9 @@
                 case '2':
                     $info = obtenerpublicacion();
                     break;
+                case '3':
+                    $info = Publicar();
+                    break;
                 default:
                     # code...
                     break;
@@ -210,5 +213,49 @@
         return $respuesta;
     }
 
+
+
+
+
+    function Publicar(){
+        $basededatos = CrearConexion();
+        $respuesta = new Respuesta;
+        
+        $publicacion = ValidarDatos($_POST['publicacion']);
+        $consulta = "SELECT nombreuser,hora,titulo,foto,contenido,id_publicaciones from publicacion where id_publicaciones = ?";
+        $sentencia = $basededatos->conexion->prepare($consulta);
+        $sentencia->bind_param("s",$publicacion);
+        $sentencia->execute();
+
+        $datos = $sentencia->get_result();
+
+
+ 
+        if ($datos->num_rows > 0) {
+            $respuesta->estado = "OK";
+            $respuesta->datos = array();
+
+            while ( $fila=$datos->fetch_assoc() ) {
+                $publicacion = new publicacion;
+                $publicacion->nombreuser = $fila['nombreuser'];
+                $publicacion->hora = $fila['hora'];
+                $publicacion->foto = $fila['foto'];
+                $publicacion->titulo = $fila['titulo'];
+                $publicacion->contenido = $fila['contenido'];
+                $publicacion->id_publicaciones = $fila['id_publicaciones'];
+                //$publicaciones->contenido = $fila['contenido'];
+                
+                array_push($respuesta->datos, $publicacion);
+            }
+        }
+        else {
+            $respuesta->estado = "ERROR";
+            $respuesta->datos = "No se encontraron registros";
+        }
+
+        
+        $basededatos->conexion->close(); 
+        return $respuesta;
+    }
 
 ?>

@@ -95,7 +95,7 @@
 
                     </select>
 
-                    <input type="submit" id="aceptarCateg" value="Enviar">
+                    <input type="submit" id="Publicar" value="Publicar">
 
 
                 </form>
@@ -214,33 +214,43 @@
 </svg>
 </div>
     </div>
-<div class="loginContenedor" id="loginContenedor">
-<div id="BarraLateral" >
-        <div class="btn-cerrar">
-            <p>X</p>
-        </div>
-        <ul>
-        <li>
-            <img src="imagenes/logo.png" alt="Logo" class="logo">
-        </li>
-        <a href="http://">
-            <li class="boton">
-            <p>PERFIL</p>
-            </li>
-        </a>
-        <a href="http://">
-            <li class="boton">
-            <p>asdasd</p>
-            </li>
-        </a>
-        <a href="http://">
-            <li class="boton">
-            <p>asdasd</p>
-            </li>
-        </a>
-    </ul>
+    <div class="loginContenedor" id="loginContenedor">
+            <div id="BarraLateral" >
+                <div class="btn-cerrar">
+                    <p>X</p>
+                </div>
+                <ul>
+                    <li class="contLogoBarra">
+                        <img src="imagenes/logo.png" alt="Logo" class="logoBarra">
+                    </li>
+                    <a href="../perfil">
+                        <li class="boton">
+                        <i class="far fa-id-badge" ></i>
+                        <p>PERFIL</p>
+                        </li>
+                    </a>
+                    <a href="../error">
+                        <li class="boton">
+                        <i class="far fa-bell" ></i>
+                        <p>Notificaciones</p>
+                        </li>
+                    </a>
+                    <a href="../error">
+                        <li class="boton">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <p>Mensajes</p>
+                        </li>
+                    </a>  
+                    <a href="../crearPublicacion">
+                        <li class="boton">
+                        <i class="fas fa-edit"></i>
+                        <p>Crear Publicacion</p>
+                        </li>
+                    </a>
+                </ul>
+     
+            </div>
 </div>
-
 
 </div>
 <div class="fila" id="pie">

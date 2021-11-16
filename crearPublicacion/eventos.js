@@ -251,4 +251,15 @@ document.getElementById('id-sun').onclick = function(){
     bounds:container
   });
 
+
+
+
+
+
   
+
+  function Publicar() {
+      let Titulo = document.getElementById(tituloPubli).value;
+      let Contenido = document.getElementById(textArea).value;
+
+  }
