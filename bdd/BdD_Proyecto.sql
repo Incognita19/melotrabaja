@@ -16,8 +16,8 @@ email varchar (24) not null
 
 create table tu_perfil(
 fecha_nacimiento date,
-id varchar (12) not null unique primary key,
-foto varchar not null,
+id varchar (12) not null unique primary key, /*se corresponde con el nombre de usuario*/
+foto varchar(6) not null,
 genero enum ('masculino','femenino','otro','unk') not null,
 telefono int (9) not null unique,
 administrador date not null,
@@ -26,52 +26,53 @@ email varchar (24) not null);
 create table trabajo (
     curriculum varchar (500) not null,
     descripción_profesional varchar (4000) not null,
-    id varchar (12) not null unique primary key);
+    id int(8) not null unique auto_increment primary key);
 
 create table categoria(
 descripcion varchar (4000) not null unique,
-id varchar (8) not null unique primary key);
+id int (8) not null auto_increment unique primary key);
 
-create table publicación(
+create table publicacion(
 hora date not null,
 titulo varchar (24) not null,
 contenido varchar (400) not null,
-id varchar (8) not null unique primary key);
+id int(8) not null unique auto_increment primary key);
 
 create table sesion(
 nombre varchar(12) not null,
 fecha-inicio date not null,
-fecha-finalisación not null,
-id varchar (8) not null unique primary key);
+fecha-final date not null,
+id int (8) not null unique auto_increment primary key);
 
 create table tiene (
-    nombreuser (12) varchar not null unique 
-    id_tu_perfil (8) varchar not null unique  
+    nombreuser varchar (12) not null unique 
+    id_tu_perfil int (8) not null unique  
 );
+
 create table contiene(
-    id_tu_perfil varchar(8) not null unique, 
-    id_trabajo varchar(8) not null unique
+    id_tu_perfil int (8) not null unique, 
+    id_trabajo int (8) not null unique
 
 
 );
 
 create table especializa(
-    id_trabajo varchar(8) not null unique ,
-    id_categoria varchar(8)  not null unique 
+    id_trabajo int (8) not null unique ,
+    id_categoria int(8)  not null unique 
 );
 create table pose(
-    id_categoria varchar(8) not null unique, 
-    id_publicaciónes varchar(8)  not null unique 
+    id_categoria int(8) not null unique, 
+    id_publicaciónes int(8)  not null unique 
 );
 create table hace(
     nombreuser varchar(12) not null unique,
-    id_publicaciónes varchar (8)  not null unique
+    id_publicaciónes int (8)  not null unique
 
 
 );
 create table inicia(
     nombreuser varchar(12)  not null unique,
-    id_sesion varchar(8) not null unique
+    id_sesion int(8) not null unique
 
 );
 
