@@ -60,7 +60,7 @@ create table especializa(
     id_trabajo int (8) not null unique ,
     id_categoria int(8)  not null unique 
 );
-create table pose(
+create table posee(
     id_categoria int(8) not null unique, 
     id_publicaciónes int(8)  not null unique 
 );
@@ -77,7 +77,7 @@ create table inicia(
 );
 
 alter table tiene
-add constraint FK_nombreuser,
+add constraint FK_nombre_user,
 foreign key (nombreuser),
 references usuario(nombreuser),
 on update cascade,
@@ -105,9 +105,9 @@ alter table hace
     on delete cascade; 
 
 alter table inicia
-    add constraint FK_nombreuser,
+    add constraint FK_nombreusuario,
     foreign key (nombreuser),
-    references usuario(nombreusuario),
+    references usuario(),
     on update cascade,
     on delete cascade;
 
@@ -118,15 +118,15 @@ alter table inicia
     on update cascade,
     on delete cascade;
 
-alter table pose 
-    add constraint FK_id_publicaciones,
+alter table posee 
+    add constraint FK_publicaciones,
     foreign key (id_publicaciones)
     references publicaciones(id)
     on update cascade
     on delete cascade;
 
-alter table pose
-    add constraint FK_id_categoria
+alter table poseee
+    add constraint FK_categoria
     foreign key (id_categoria)
     references categoria(id)
     on update cascade
@@ -140,14 +140,14 @@ alter table especializa
     on delete cascade;
 
 alter table especializa
-    add constraint FK_id_trabajo
+    add constraint FK_trabajo
     foreign key (id_trabajo)
     references trabajo(id)
     on update cascade
     on delete cascade;
 
 alter table contiene
-    add constraint FK_id_tu_perfil
+    add constraint FK_tu_perfil
     foreign key (id_tu_perfil)
     references tu_perfil(id)
     on update cascade
