@@ -46,7 +46,7 @@ id int (8) not null unique auto_increment primary key);
 
 create table tiene (
     nombreuser varchar (12) not null unique,
-    id_tu_perfil int (8) not null unique  
+    id_tu_perfil varchar (12) not null unique  
 );
 
 create table contiene(
@@ -62,11 +62,11 @@ create table especializa(
 );
 create table posee(
     id_categoria int(8) not null unique, 
-    id_publicaciónes int(8)  not null unique 
+    id_publicaciones int(8)  not null unique 
 );
 create table hace(
     nombreuser varchar(12) not null unique,
-    id_publicaciónes int (8)  not null unique
+    id_publicaciones int (8)  not null unique
 
 
 );
@@ -98,8 +98,8 @@ alter table hace
     on delete cascade;
     
 alter table hace
-    add constraint FK_id_publicaciones
-    foreign key (id_publicaciones)
+    add constraint FK_id_publicacion
+    foreign key (id_publicacion)
     references publicaciones(id)
     on update cascade
     on delete cascade; 
@@ -119,8 +119,8 @@ alter table inicia
     on delete cascade;
 
 alter table posee 
-    add constraint FK_publicaciones
-    foreign key (id_publicaciones)
+    add constraint FK_publicacion
+    foreign key (id_publicacion)
     references publicaciones(id)
     on update cascade
     on delete cascade;
