@@ -153,7 +153,7 @@ alter table contiene
     on delete cascade;
 
 alter table contiene
-    add constraint FK_id_trabajo
+    add constraint FK_id_trabajo1
     foreign key (id_trabajo)
     references trabajo(id)
     on update cascade
