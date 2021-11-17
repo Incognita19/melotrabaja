@@ -100,7 +100,7 @@ alter table hace
 alter table hace
     add constraint FK_id_publicacion
     foreign key (id_publicacion)
-    references publicaciones(id)
+    references publicacion(id_publicacion)
     on update cascade
     on delete cascade; 
 
@@ -121,7 +121,7 @@ alter table inicia
 alter table posee 
     add constraint FK_publicacion
     foreign key (id_publicacion)
-    references publicaciones(id)
+    references publicacion(id_publicacion)
     on update cascade
     on delete cascade;
 
