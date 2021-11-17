@@ -1,0 +1,1 @@
+INSERT INTO publicacion (titulo,contenido) values (?,?)

@@ -140,7 +140,7 @@
         $basededatos = CrearConexion();
         $respuesta = new Respuesta;
 
-        $consulta = "SELECT nombreuser,hora,titulo,foto,fijadas,id_publicaciones from publicaciones";
+        $consulta = "SELECT nombreuser,hora,titulo,foto,fijadas,id as 'id_publicaciones' from publicaciones";
 
         $datos = $basededatos->conexion->query($consulta);
  
