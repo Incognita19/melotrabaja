@@ -62,11 +62,11 @@ create table especializa(
 );
 create table posee(
     id_categoria int(8) not null unique, 
-    id_publicaciones int(8)  not null unique 
+    id_publicacion int(8)  not null unique 
 );
 create table hace(
     nombreuser varchar(12) not null unique,
-    id_publicaciones int (8)  not null unique
+    id_publicacion int (8)  not null unique
 
 
 );
