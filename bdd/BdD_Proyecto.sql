@@ -3,17 +3,17 @@
 DROP DATABASE IF EXISTS melotrabaja;
 CREATE DATABASE melotrabaja;
 USE melotrabaja;
-/*Esta entidad contiene los atributos del perfil del usuario en la aplicación--*/
 
 
+/*Esta entidad contiene los atributos del usuario que se usan para el registro y el inicio de sesion--*/
 create table usuario(
-nombreuser varchar (12) not null unique primary key,
-contraseña varchar (10) not null,
-apellido varchar(12) not null,
-nombre varchar (12) not null,
-email varchar (24) not null
+nombreuser varchar (12) not null unique primary key, /*Esta es la columna donde se almacena el nombre del usuario que es primary key (identifica la tabla)*/
+contraseña varchar (10) not null,/**/
+apellido varchar(12) not null,/**/
+nombre varchar (12) not null,/**/
+email varchar (24) not null/**/
 );
-
+/**/
 create table tu_perfil(
 fecha_nacimiento date,
 id varchar (12) not null unique primary key, /*se corresponde con el nombre de usuario*/
@@ -33,13 +33,13 @@ descripcion text not null ,
 id int (8) not null auto_increment unique primary key);
 
 create table publicacion(
-hora date not null,
+fecha date not null,
 titulo varchar (24) not null,
 contenido varchar (400) not null,
 id_publicacion int(8) not null unique auto_increment primary key);
 
 create table sesion(
-nombre varchar(12) not null,
+nombreuser varchar(12) not null,
 fecha_inicio date not null,
 fecha_final date not null,
 id int (8) not null unique auto_increment primary key);
@@ -75,6 +75,12 @@ create table inicia(
     id_sesion int(8) not null unique
 
 );
+
+
+
+
+
+
 
 alter table tiene
 add constraint FK_nombre_user
