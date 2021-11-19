@@ -140,7 +140,7 @@
         $basededatos = CrearConexion();
         $respuesta = new Respuesta;
 
-        $consulta = "SELECT nombreuser,hora,titulo,foto,fijadas,id as 'id_publicaciones' from publicaciones";
+        $consulta = "SELECT nombreuser,fecha,foto,titulo,fijadas,id_publicacion as 'id_publicacion' from publicacion";
 
         $datos = $basededatos->conexion->query($consulta);
  
@@ -151,11 +151,11 @@
             while ( $fila=$datos->fetch_assoc() ) {
                 $publicaciones = new publicaciones;
                 $publicaciones->nombreuser = $fila['nombreuser'];
-                $publicaciones->hora = $fila['hora'];
+                $publicaciones->hora = $fila['fecha'];
                 $publicaciones->foto = $fila['foto'];
                 $publicaciones->titulo = $fila['titulo'];
                 $publicaciones->fijadas = $fila['fijadas'];
-                $publicaciones->id_publicaciones = $fila['id_publicaciones'];
+                $publicaciones->id_publicaciones = $fila['id_publicacion'];
                 //$publicaciones->contenido = $fila['contenido'];
                 
                 array_push($respuesta->datos, $publicaciones);
@@ -177,7 +177,7 @@
         $respuesta = new Respuesta;
         
         $publicacion = ValidarDatos($_POST['publicacion']);
-        $consulta = "SELECT nombreuser,hora,titulo,foto,contenido,id_publicaciones from publicacion where id_publicaciones = ?";
+        $consulta = "SELECT nombreuser,fecha,titulo,foto,contenido,id_publicacion from publicacion where id_publicacion = ?";
         $sentencia = $basededatos->conexion->prepare($consulta);
         $sentencia->bind_param("s",$publicacion);
         $sentencia->execute();
@@ -193,11 +193,11 @@
             while ( $fila=$datos->fetch_assoc() ) {
                 $publicacion = new publicacion;
                 $publicacion->nombreuser = $fila['nombreuser'];
-                $publicacion->hora = $fila['hora'];
+                $publicacion->hora = $fila['fecha'];
                 $publicacion->foto = $fila['foto'];
                 $publicacion->titulo = $fila['titulo'];
                 $publicacion->contenido = $fila['contenido'];
-                $publicacion->id_publicaciones = $fila['id_publicaciones'];
+                $publicacion->id_publicaciones = $fila['id_publicacion'];
                 //$publicaciones->contenido = $fila['contenido'];
                 
                 array_push($respuesta->datos, $publicacion);
@@ -221,32 +221,25 @@
         $basededatos = CrearConexion();
         $respuesta = new Respuesta;
         
-        $publicacion = ValidarDatos($_POST['publicacion']);
-        $consulta = "SELECT nombreuser,hora,titulo,foto,contenido,id_publicaciones from publicacion where id_publicaciones = ?";
+       
+        $titulo = ValidarDatos($_POST['Titulo']);
+        $contenido = ValidarDatos($_POST['Contenido']);
+        $foto = ValidarDatos($_POST['Foto']);
+        $consulta = "INSERT INTO publicacion (titulo,contenido,foto) values (?,?,?)";
+
         $sentencia = $basededatos->conexion->prepare($consulta);
-        $sentencia->bind_param("s",$publicacion);
+        $sentencia->bind_param("sss",$titulo,$contenido,$foto);
         $sentencia->execute();
 
-        $datos = $sentencia->get_result();
+        $datos = $sentencia->affected_rows;
 
 
  
-        if ($datos->num_rows > 0) {
+        if ($datos == 1) {
             $respuesta->estado = "OK";
-            $respuesta->datos = array();
+            $respuesta->datos = "Publicado con exito";
 
-            while ( $fila=$datos->fetch_assoc() ) {
-                $publicacion = new publicacion;
-                $publicacion->nombreuser = $fila['nombreuser'];
-                $publicacion->hora = $fila['hora'];
-                $publicacion->foto = $fila['foto'];
-                $publicacion->titulo = $fila['titulo'];
-                $publicacion->contenido = $fila['contenido'];
-                $publicacion->id_publicaciones = $fila['id_publicaciones'];
-                //$publicaciones->contenido = $fila['contenido'];
-                
-                array_push($respuesta->datos, $publicacion);
-            }
+
         }
         else {
             $respuesta->estado = "ERROR";

@@ -202,6 +202,7 @@ function cargarPublicacion(publicacion) {
                             barraContenido.insertBefore(divfoto_usuario,pnombreuser);
 
 
+
                              
                     });
                 }

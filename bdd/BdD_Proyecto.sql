@@ -35,7 +35,11 @@ create table publicacion(
 fecha timestamp not null default current_timestamp,
 titulo varchar (24) not null,
 contenido varchar (400) not null,
-id_publicacion int(8) not null unique auto_increment primary key);
+fijadas enum("si","no") not null default "no",
+id_publicacion int(8) not null unique auto_increment primary key,
+nombreuser varchar (12) not null default "Anonimo",
+foto varchar (7) not null default "#4287f5"
+);
 
 create table sesion(
 nombreuser varchar(12) not null,

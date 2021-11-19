@@ -80,7 +80,7 @@
             
             <div id="barraContenido">
                 <p id="categoria">Elegir categoria</p>
-                <form action="../../form-result.php" id="formcateg" target="_blank">
+                <form id="formcateg">
                     <select name="categform" id="categform">
 
                         <option>Licenciado</option>
@@ -95,10 +95,11 @@
 
                     </select>
 
-                    <input type="submit" id="Publicar" value="Publicar">
-
-
+                    <!-- <input type="submit" id="Publicar" onclick="mostrarRegistro()" value="Publicar"> -->
+                    
                 </form>
+                <button id="Publicar" onclick="Publicar()">Publicar</button>
+
             </div>
         </div>
         <div id="contenedorFondo">
@@ -260,8 +261,8 @@
 </div>
 <script src="eventos.js"></script>
 <script>
-        let publicacion = obtenerParametroURL();
-        cargarPublicacion(publicacion);
+        //let publicacion = obtenerParametroURL();
+       
     </script>
 
 </body>

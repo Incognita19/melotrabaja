@@ -254,12 +254,63 @@ document.getElementById('id-sun').onclick = function(){
 
 
 
+  function AlAzarEntre(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+/**
+ * Crea una secuencia alfanumérica para aumentar la seguridad de la encriptación
+ * @returns secuencia de caracteres casi al azar.
+ */
+function CrearColor() {
+    let caracteres = "0123456789abcdef";
+    caracteres = Array.from(caracteres);
+    //console.log(caracteres);
+    let resultado = "#";
+    for (let cont = 0; cont < 6; cont++) {
+        let posicionAlAzar = AlAzarEntre(0, caracteres.length);
+        resultado = resultado + caracteres[posicionAlAzar];
+    }
+    
+    return resultado;
+}
 
 
-  
 
   function Publicar() {
-      let Titulo = document.getElementById(tituloPubli).value;
-      let Contenido = document.getElementById(textArea).value;
-
+      console.log("click");
+      let Titulo = document.getElementById("tituloPubli").value;
+      let Contenido = editor.getContents();//document.getElementById("textArea").value;
+      let Foto = CrearColor();
+      $.ajax(
+        {
+            //1 - Indicar la URL de donde se obtienen los datos
+            url:"../bdd/api.php",
+            //2 - Método para el envío de los datos, puede ser 'GET' o 'POST'
+            method: "POST",
+            //3 - Indicar la forma que tendran los datos, en este caso es 'json'
+            datatype: "json",
+            //4 - Indicar los datos que se incluirán. 
+            // Primero se indica el nombre del dato esperado por la página y luego el dato
+            data:{
+                'modo': 3,
+                'Titulo': Titulo,
+                'Contenido': Contenido.ops[0].insert,
+                'Foto': Foto
+                },
+            //5 - Establecemos una función que se ejecuta en caso de éxito en la operación
+            success:function (datos) {
+                
+                console.log(datos);
+            
+                if (datos.Respuesta.estado == "OK") {
+                    alert(datos.Respuesta.datos);
+                }
+            },
+            //6 - Establecemos una función que se ejecuta en caso de error
+            error:function(errorThrown){
+                console.error("ERROR:" + errorThrown.responseText);
+            }
+        }
+    );
   }

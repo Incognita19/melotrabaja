@@ -266,9 +266,15 @@ closeLogin.addEventListener('click', () => {
                                     divPublicacion = document.createElement('div');
                                     divPublicacion.classList.add('publicaciones', 'recientes');
                             
-                                    ptitulo = document.createElement('p');
-                                    ptitulo.classList.add('titulo');
-                                    ptitulo.textContent=publicacion.titulo;
+                                    alink=document.createElement("a");
+                                texto=document.createTextNode(publicacion.titulo);
+                                alink.appendChild(texto);
+                                alink.href="/proyecto/melotrabaja/publicaciones/verpublicacion.php?id_publicacion="+publicacion.id_publicaciones;
+                                ptitulo = document.createElement('p');
+                                ptitulo.classList.add('titulo');
+                                ptitulo.appendChild(alink);
+
+
                             
                                     pnombreuser = document.createElement('p');
                                     pnombreuser.classList.add('nombreuser');
