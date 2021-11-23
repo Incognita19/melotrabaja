@@ -13,13 +13,18 @@
     <title>MeloTrabaja</title>
 </head>
 <body>
+        <!-- Este div contiene toda la pagina -->
 <div id="page">
 
+        <!-- Este div contiene el encabezado -->
         <div class="fila" id="encabezado">
+
+    <!-- Este div contiene el logo y el titulo del encabezado -->
     <div id="meloTrabaja">
         <div id="logo"></div>
         <h1>MELOTRABAJA</h1> 
     </div>
+        <!-- Estos div contienen el modo claro nocturno -->
                     <div class="container-btn-mode">
                 <div id="id-sun" class="btn-mode sun active">
                     <i class="fas fa-sun"></i>
@@ -28,6 +33,7 @@
                     <i class="fas fa-moon"></i>
                 </div>
                 </div>
+                <!-- este div contiene el fondo del encabezado -->
     <div class="area" >
             <ul class="circles">
                     <li></li>
@@ -45,13 +51,18 @@
     </div>
 
 
-
+    <!-- Este div contiene la barra -->
         <div class="fila" id="barra">
+
+            <!-- Este div contiene el boton para abrir la barra lateral -->
             <div class="toggle-btn" id="iconoMenu">    
             </div>
+            <!-- Este boton es para abrir login  -->
             <button  id="openLogin">
                     Acceder
             </button>
+
+            <!-- Este div contiene buscar -->
             <div class="buscar"></buscar>
 
 
@@ -64,16 +75,18 @@
 
         </div>
 
-
+            <!-- Este div contiene el contenido de la pagina -->
         <div class="fila" id="contenido">
             
+            <!-- Este div contiene el div que contiene las fijadas y recientes -->
             <div id="bordeContenido">
+                <!-- Este div contiene contenidotop que es una separacion del contenido, esta es la superior. Contiene fijadas. -->
                 <div id="contenidoTop" class="separacionContenido">
                     <h3>PUBLICACIONES FIJADAS</h3>
 
 
-
                     </div>
+                    <!-- Este div contiene contenidobot que es una separacion del contenido, esta es la inferior. Contiene recientes. -->
                 <div id="contenidoBot" class="separacionContenido">
                     <h3>PUBLICACIONES RECIENTES</h3>
 
@@ -83,6 +96,8 @@
                 </div>
 
             </div>
+
+            <!-- Este div contiene el fondo en movimiento -->
             <div id="contenedorFondo">
 
                     <svg version="1.1" id="home-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -197,13 +212,17 @@
             </div>
         </div>
 
-
+            <!-- Este div contiene el logincontenedor -->
         <div class="loginContenedor" id="loginContenedor">
+
+        <!-- Este div contiene la barra lateral -->
             <div id="BarraLateral" >
+                <!-- Este div contiene el boton cerrar , para la barra lateral -->
                 <div class="btn-cerrar">
                     <p>X</p>
                 </div>
                 <ul>
+                    <!-- Esto es una lista que contiene los apartados para navegar dentro de la web -->
                     <li class="contLogoBarra">
                         <img src="imagenes/logo.png" alt="Logo" class="logoBarra">
                     </li>
@@ -235,6 +254,8 @@
      
             </div>
             
+
+            <!-- Este div contiene el modal de login y registro -->
             <div class="login mostrarlogin" id="login">
                 <div id="login1">
                     <div id="datosLogin">
@@ -264,14 +285,16 @@
         </div>
 
 
-
+            <!-- Este div contiene el pie de la pagina -->
         <div class="fila" id="pie">
 
             </div>
 
 
-
+    <!-- Este script enlaza eventos.js con la web para la interaccion   -->
 <script src="eventos.js"></script>
+        
+        <!-- Este script carga las funciones de js para las publicaciones ademas que compara las fechas y las organiza por mas nuevas a mas viejas -->
     <script>
         publicaciones = publicaciones.sort((a,b)=>compararFechas(a,b));
         cargarFijadas();
